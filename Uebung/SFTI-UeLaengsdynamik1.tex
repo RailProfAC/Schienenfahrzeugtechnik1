@@ -12,10 +12,10 @@
 \usepackage{fancyhdr}
 \usepackage[scaled]{helvet}
 \usepackage{paralist}
-\usepackage{pdfpages}
 
 \usetikzlibrary{calc}
 \newtheorem{aufgabe}{Aufgabe}
+
 
 \renewcommand*\familydefault{\sfdefault}
 \renewcommand{\arraystretch}{1.1}
@@ -30,8 +30,8 @@
 \fancyhead[L]{Prof. Dr. Raphael Pfaff}
 \fancyhead[R]{84111: Schienenfahrzeugtechnik}
 \fancyfoot[L]{Datei: \jobname}
-\fancyfoot[R]{Datum: \today \vspace{.1cm}
-\begin{picture}(0,0)(0,0)\put(.5,1){\includegraphics[height=5cm]{fh_logo}}\end{picture}}
+\fancyfoot[R]{Datum: \today
+\begin{picture}(0,0)(0,0)\put(.5,0){\includegraphics[height=5cm]{fh_logo}}\end{picture}}
 
 \begin{document}
 \maketitle
@@ -39,6 +39,28 @@
 \pagestyle{fancy}
 \vspace{-2cm}
 
+\begin{aufgabe}[Railway Challenge]
+\label{Ta:Acceleration}
+Eine Parkbahn-Lokomotive soll gem\"a{\ss} Lastenheft ausgelegt werden. Bestimmen Sie:
+\begin{itemize}
+	\item Die f\"ur die Acceleration Challenge optimale Masse innerhalb der Grenzen der Spezifikation f\"ur einen konstanten Reibwert $\mu = 0{,}15$.
+	\item Den Energiebedarf f\"ur den Dauerbetrieb gem\"a{\ss} Spezifikation.
+	\begin{itemize}
+		\item Rechnen Sie in eine Masse des Energiespeichers um f\"ur folgende Energiedichten: \vspace{.2cm} \\ 
+		\centering
+		\begin{tabular}{|c|c|}
+		\hline
+		Wasserstoff & $1{,}19 \frac{\mathrm{MJ}}{\mathrm{kg}}$ \\ \hline
+		Bleiakkumulator & $0{,}11 \frac{\mathrm{MJ}}{\mathrm{kg}}$ \\ \hline
+		Mi-Mh-Akku & $0{,}28 \frac{\mathrm{MJ}}{\mathrm{kg}}$ \\ \hline
+		Methan & $50 \frac{\mathrm{MJ}}{\mathrm{kg}}$ \\ \hline
+		Diesel & $43 \frac{\mathrm{MJ}}{\mathrm{kg}}$ \\ \hline
+		\end{tabular}
+		\end{itemize}
+		\item Bestimmen Sie die Energie der vorgeschriebenen rekuperativen Bremsung und die daraus zu erreichende Geschwindigkeit abh\"angig vom Wirkungsgrad. Weiterhin bestimmen Sie die zu erreichende Fahrstrecke unter der Annahme von einem Fahrwiderstand von $1\%$ der Gewichtskraft abh\"angig vom Wirkungsgrad.
+\end{itemize}
+\end{aufgabe}
+\newpage
 \begin{aufgabe}
 Eine Lokomotive der BR 143 zieht einen Wagenzug. Die technischen Daten der Fahrzeuge sind:
 \begin{itemize}
