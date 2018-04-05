@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper,headsepline]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\usepackage[scaled]{helvet}
+
+\usetikzlibrary{calc}
+\newtheorem{aufgabe}{Aufgabe}
+
+
+\renewcommand*\familydefault{\sfdefault}
+\renewcommand{\arraystretch}{1.1}
+
+\title{\"Ubung Festigkeitsanforderungen und -nachweis}
+\date{}
+\makeatletter
+\let\Title\@title
+\let\Author\@author
+\makeatother
+\pagestyle{fancy}
+\fancyhead[L]{Prof. Dr. Raphael Pfaff}
+\fancyhead[R]{84111: Schienenfahrzeugtechnik}
+\fancyfoot[L]{Datei: \jobname}
+\fancyfoot[R]{Datum: \today
+\begin{picture}(0,0)(0,0)\put(.5,0){\includegraphics[height=5cm]{fh_logo}}\end{picture}}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\vspace{-2cm}
+
+\begin{aufgabe}[Festigkeitsanforderungen] 
+\label{Ta:Festigkeit}
+Als Absolvent(in) der Schienenfahrzeugtechnik bei einem Zulieferunternehmen ist es Ihre erste Aufgabe, einen Sensor (z.B. ein Dopplerradar) mit einer Masse $m = 50 \, \mathrm{kg}$ in einem Abstand von $x_{A} = 200 \, \mathrm{mm}$ zur Anschraubfl\"ache im Bereich der Pufferbohle zu befestigen. Aufgrund der beengten Einbaulage w\"ahlen Sie eine Kragarmkonstruktion.
+\begin{figure}[htbp]
+\begin{center}
+\begin{tikzpicture}
+\draw[fill = gray!30] (-2,-2) -- (-2,2) -- (2,2) -- (2,-2) -- (-2,-2);
+\filldraw (0,0) circle (0.1) node[above = 1]  {$m$};
+\draw[ultra thick] (2,0) -- (7,0);
+\draw[ultra thick] (7,-2) -- (7,2);
+\foreach \y in {-1.8, -1.6, ..., 2.0}
+	{\draw[thick] (7, \y) -- (7.2, \y-.2);
+	}
+\draw[<->, thick] (0,-.8) -- (7,-.8) node[pos = 0.5, above] {$x_{A}$};
+\draw[->, thick] (-3,-3) -- (-1,-3) node[pos = 0.5, above] {$x$};
+\draw[->, thick] (-3,-3) -- (-3,-1) node[pos = 0.5, right] {$z$};
+\end{tikzpicture}				
+\caption{Darstellung des Aufbaus}
+\label{Fig:Festigkeit}
+\end{center}
+\end{figure}
+
+\begin{enumerate}
+		\item Was sind die Nachteile einer solchen Kragarmkonstruktion?
+		\item Welche alternativen Konstruktionen sollten gew\"ahlt werden?
+		\item Bestimmen Sie die Anforderungen an den Festigkeitsnachweise gem\"a{\ss} EN 12663-1 und EN 12663-2 f\"ur folgenden F\"alle:
+		\begin{enumerate}
+		\item Statischer Nachweis, Personenfahrzeug
+		\item Nachweis auf Dauerfestigkeit, Personenfahrzeug
+		\item Statischer Nachweis, G\"uterwagen
+		\item Nachweis auf Dauerfestigkeit, G\"uterwagen
+		\end{enumerate}
+\end{enumerate}
+Gehen Sie dabei von einem Stahl S 355 aus.
+\end{aufgabe}
+
+\begin{aufgabe}[Festigkeitsanforderungen] 
+\label{Ta:Nachweis}
+F\"uhren Sie den Festigkeitsnachweis f\"ur die oben bestimmten Lastf\"alle f\"ur eine Kragarm aus einem Rundstahl $d = 25 \, \mathrm{mm}$. Als Material nehmen Sie  S355 mit einer Streckgrenze von $355\, \frac{\mathrm{N}}{\mathrm{mm}^2}$ sowie einer dauerfest ertragbaren Biegespannung von $235\, \frac{\mathrm{N}}{\mathrm{mm}^2}$ an.
+\end{aufgabe}
+\end{document}

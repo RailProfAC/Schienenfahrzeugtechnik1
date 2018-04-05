@@ -1,0 +1,76 @@
+\documentclass[11pt,a4paper,headsepline]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\usepackage[scaled]{helvet}
+\usepackage{paralist}
+\usepackage{pdfpages}
+
+\usetikzlibrary{calc}
+\newtheorem{aufgabe}{Aufgabe}
+
+\renewcommand*\familydefault{\sfdefault}
+\renewcommand{\arraystretch}{1.1}
+
+\title{\"Ubung Rads\"atze}
+\date{}
+\makeatletter
+\let\Title\@title
+\let\Author\@author
+\makeatother
+\pagestyle{fancy}
+\fancyhead[L]{Prof. Dr. Raphael Pfaff}
+\fancyhead[R]{84111: Schienenfahrzeugtechnik}
+\fancyfoot[L]{Datei: \jobname}
+\fancyfoot[R]{Datum: \today \vspace{.1cm}
+\begin{picture}(0,0)(0,0)\put(.5,1){\includegraphics[height=5cm]{fh_logo}}\end{picture}}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\vspace{-2cm}
+\begin{aufgabe}[Radsatzwellen]
+Sizzieren Sie die Verl\"aufe der Momente $M_{x}$, $M_{y}$ und $M_{z}$ entlang der Radsatzwelle f\"ur folgende F\"alle:
+	\begin{enumerate}[a)]
+	\item Klotzbremse einseitig auf das Rad wirkend
+	\item Klotzbremse beidseitig auf das Rad wirkend
+	\item Eine Wellenbremsscheibe
+	\item Zwei Wellenbremsscheiben
+	\item Zwei Radbremsscheiben
+	\end{enumerate}
+\end{aufgabe}
+\vspace{.5cm}
+\begin{aufgabe}[Rads\"atze/W\"armeeintrag]
+Ein bereiftes Rad mit Laufkreisdurchmesser $d = 920\; \mathrm{mm}$ wird in einem Gef\"alle mit einer Klotzbremse dauergebremst, um die Geschwindigkeit konstant zu halten. 
+
+\begin{itemize}
+	\item Spezifische W\"armekapazit\"at Stahl: $c = 477 \, \frac{\mathrm{J}}{\mathrm{kg}\, \mathrm{K}}$
+	\item Geschwindigkeit: $v = 70\, \frac{\mathrm{km}}{\mathrm{h}}$
+	\item Radsatzlast: $ 2 Q = 22{,5} \, \mathrm{t}$
+	\item Streckenneigung: $i_{k} = \{2, 4\} \%$
+\end{itemize}
+\begin{enumerate}[a)]
+\item Bestimmen Sie den Leistungseintrag der Klotzbremse w\"ahrend der Beharrungsbremsung in den beiden angegeben Streckenneigung unter folgenden Annahmen:
+	\begin{itemize}
+		\item Es findet kein Transfer von abzubremsenden Massen statt, d.h. jedes Rad bremst sich selbst
+		\item Die Verbundsohle nimmt 10 \% des Leistungseintrags auf
+	\end{itemize}
+\item Bestimmen Sie die Temperaturentwicklung im Radreifen unter folgenden Annahmen:
+	\begin{itemize}
+		\item Keine W\"armeleitung in den Radsteg
+		\item Radreifendicke: $d = 90 \, \mathrm{mm}$ 
+		\item Radbreite: $b = 140 \, \mathrm{mm}$
+	\end{itemize}
+\end{enumerate}
+\end{aufgabe}
+
+\end{document}

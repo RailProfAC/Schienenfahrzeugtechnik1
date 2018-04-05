@@ -1,0 +1,164 @@
+% !TEX root = SFV-14033_SFT1.tex
+\section{G\"uterwagen}
+\frame{\sectionpage}
+
+
+\frame{\frametitle{Zahlen zum G\"uterverkehr}
+\framesubtitle{}
+\begin{center}
+\begin{tikzpicture}[scale = 1]
+		\begin{axis}[width = 10 cm, ybar =2pt, bar width = 3pt,    		xlabel={Jahr},%    		ylabel={\color{blue!80!black}Mrd. tkm},
+		%xtick=data,
+		xtick={1997,2000,2005,2010,2015},
+		x tick label style={rotate=45,anchor=east},
+		ymin = 0, ymax = 125,
+		legend style={at={(0.5,-0.30)},        		anchor=north,legend columns=-1},
+		/pgf/number format/.cd,
+        		use comma,
+        		1000 sep={},]\addplot table {SGVMenge.dat};
+\addplot table {SGVWagen.dat};%\addplot table {data_d3.dat};%\addplot table {data_d4.dat};
+\legend{Mrd. tkm, 1000 G\"uterwagen}\end{axis}
+\end{tikzpicture}
+\end{center}
+}
+
+
+
+\frame{\frametitle{Einf\"uhrung}
+\framesubtitle{}
+\begin{columns}[t] 
+     \begin{column}[T]{5cm} 
+     	\begin{itemize}
+     		\item Gr\"o{\ss}te Gruppe an Fahrzeugen
+		\item Universalwagen
+		\begin{itemize}
+		\item Standardisierte Verkehre
+		\item z.B. Flachwagen
+		\end{itemize}
+		\item Sonderbauart 
+		\begin{itemize}
+		\item Bestimmte Verkehre
+		\item z.B. Containertragwagen, Pkw-Transportwagen
+		\end{itemize}     	
+		\item H\"aufig im Privatbesitz
+		\item Anspruchsvoll trotz einfacher Technik
+		\end{itemize}
+     \end{column}
+     	\begin{column}[T]{7cm} 
+         	%\begin{center}
+		Regelbauart:
+	     	\begin{tabular}{|l|c|}
+		\hline 
+		E & offene Wagen \\ \hline
+		G & gedeckte Wagen \\ \hline
+		K & Flachwagen (2 RS) \\ \hline
+		O & gemischte Offen-Flachwagen \\ \hline
+		R & Drehgestell-Flachwagen \\ \hline
+		\end{tabular} \vspace{1mm}
+		Sonderbauart:
+		\begin{tabular}{|l|c|}
+		\hline 
+		F & offene Wagen \\ \hline
+		H & gedeckte Wagen \\ \hline
+		I & K\"uhlwagen \\ \hline
+		L & Flachwagen mit unabh\"angigen RS \\ \hline
+		S & Drehgestell-Flachwagen \\ \hline
+		T & Wagen mit \"ofnungsf\"ahigem Dach \\ \hline
+		U & Sonderwagen \\ \hline
+		Z & Kesselwagen \\ \hline
+		\end{tabular}
+            	%\end{center}
+     \end{column}
+ \end{columns}
+}
+
+\offslide{Sammeln von Anforderungen}
+
+\frame[allowframebreaks]{\frametitle{Anforderungen gem\"a{\ss} WAG TSI}
+\framesubtitle{}
+\begin{itemize}
+\item Festigkeit gem\"a{\ss} EN12663-2
+\begin{itemize}
+	\item Zwei Kategorien: F-I: Allgemein, F-II: nicht ablaufen/absto{\ss}en
+	\item L\"angsdruckkraft: F-I: 2000 kN, F-II: 1200 kN
+	\item Zugkraft: 1000/1500 kN (je nach Anschlag)
+\end{itemize}
+\item Integrit\"at: bewegliche TEile sind gegen Positions\"anderungen gesichert
+\item Begrenzungslinie abh\"angig vom Zielprofil
+\item Radsatzlast gem\"a{\ss} EN 15228
+\item Kompatibilit\"at mit Gleisfreimeldeanlagen
+\begin{itemize}
+	\item Gleisstromkreise
+	\item Achsz\"ahler
+	\item Kabelschleifen
+\end{itemize}
+\item Zustands\"uberwachung der Radsatzlager
+\begin{itemize}
+	\item Fahrzeugseitig 
+	\item Streckenseitig (gem\"a{\ss} EN15437-1:2009)
+\end{itemize}
+\item Laufsicherheit
+\begin{itemize}
+	\item Sicherheit gegen Entgleisen unter Gleisverwindung
+	\item Dynamisches Verhalten gem. EN14363 oder mittels validiertem Modell
+\end{itemize}
+\item Laufwerk
+\begin{itemize}
+	\item Festigkeit gem\"a{\ss} EN13749
+	\item Forderungen an Rads\"aze und R\"ader gem\"a{\ss} WAG TSI
+\end{itemize}
+\item Bremse
+\begin{itemize}
+	\item Sicherheitsbetrachtung gem\"a{\ss} Common Safety Methods (CSM, (EG) Nr. 352/2009)
+	\begin{itemize}
+		\item Ausfall einer Einheit bei Mehrfachfehler
+		\item Ausfall mehrerer Einheiten bei Einfachfehler
+	\end{itemize}
+	\item Bremsleistung
+	\begin{itemize}
+		\item Durch Berechnung gem\"a{\ss} EN14531-6
+		\item Durch Versuch gem\"a{\ss} UIC 544-1
+	\end{itemize}
+	\item Feststellbremse
+	\begin{itemize}
+		\item Zustandsanzeige
+	\end{itemize}
+	\item W\"armekapazit\"at
+	\begin{itemize}
+		\item Dauerbremsung mit 45 kW (70 km/h, 40 km, i = 2,1\%)
+	\end{itemize}
+	\item Gleitschutz f\"ur Scheibenbremsen oder Klotzbremse mit $\mu_{m} > 0{,}12$
+\end{itemize}
+\item Umgebungsbedingungen
+\begin{itemize}
+	\item T1: -25 \si{\degreeCelsius} bis +40 \si{\degreeCelsius}
+	\item T2: -40 \si{\degreeCelsius} bis +35 \si{\degreeCelsius}
+	\item T3: -25 \si{\degreeCelsius} bis +45 \si{\degreeCelsius}
+	\item Schnee, Eis und Hagel gem\"a{\ss} EN50125-1
+\end{itemize}
+\item Brandschutz
+\begin{itemize}
+	\item Abschirmung potenzieller Brandquelle von der Ladung
+	\item Anforderungen an Materialien, Kabel und Fl\"ussigkeiten
+\end{itemize}
+\item Dokumentation
+\begin{itemize}
+	\item Betriebsunterlagen
+	\item Instandhaltungsvorschriften
+\end{itemize}
+\end{itemize}
+}
+
+\frame{\frametitle{EG-Konformit\"at nach TSI WAG}
+\framesubtitle{}
+\begin{itemize}
+\item F\"ur einige Elemente (Interoperabilit\"atskomponenten) wird von einer EG-Konformit\"at ausgegangen:
+\begin{itemize}
+	\item Einachsige Laufwerke: Doppelschakenaufh\"angung, Niesky 2, S 2000
+	\item Drehgestelle mit zwei Rads\"atzen: Y25-Familie, zweiachsiges Lenkdrehgestell
+	\item Dreiachsige Drehgestelle mit Schakenaufh\"angung
+\end{itemize}
+\item Auch f\"ur gewisse Materialien in Bezug auf Entflammbarkeit sowie Brandschutzw\"ande
+\end{itemize}
+}
+

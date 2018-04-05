@@ -1,0 +1,71 @@
+\documentclass[11pt,a4paper,headsepline]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\usepackage[scaled]{helvet}
+\usepackage{paralist}
+
+\usetikzlibrary{calc}
+\newtheorem{aufgabe}{Aufgabe}
+
+
+\renewcommand*\familydefault{\sfdefault}
+\renewcommand{\arraystretch}{1.1}
+
+\title{\"Ubung L\"angsdynamik II}
+\date{}
+\makeatletter
+\let\Title\@title
+\let\Author\@author
+\makeatother
+\pagestyle{fancy}
+\fancyhead[L]{Prof. Dr. Raphael Pfaff}
+\fancyhead[R]{84111: Schienenfahrzeugtechnik}
+\fancyfoot[L]{Datei: \jobname}
+\fancyfoot[R]{Datum: \today \vspace{.1cm}
+\begin{picture}(0,0)(0,0)\put(.5,1){\includegraphics[height=5cm]{fh_logo}}\end{picture}}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\vspace{-2cm}
+
+\begin{aufgabe}[Massenband/Massenpunktmodell]
+Ein siebenteiliger Triebzug ($m_{w} = 50 \, \mathrm{t}$, $l_{w} = 25 \, \mathrm{m}$) f\"ahrt auf einer Strecke, die der Vorschrift 
+ \begin{equation*}
+h(x) = 
+\begin{cases}
+ 0, \quad x < 5000 \\
+ - 100 \cos \frac{x-5000}{5000} + 100, \quad x \geq 5000
+\end{cases}
+\end{equation*}
+entspricht. Hierbei wird die Position der Zugspitze $x$ in $\mathrm{m}$ gemessen.
+\begin{enumerate}[a)]
+\item Bestimmen Sie die maximale Streckenneigung $i_{max}$ der Strecke.
+\item Bestimmen Sie den Punkt, an dem $E_{pot} > 0$ gilt im Massenband- bzw. Massenpunktmodell.
+\item Bestimmen Sie f\"ur $x = 7000$ die Neigungswiderstandskraft des Zugverbands, jeweils im Massenband- bzw. Massenpunktmodell.
+\end{enumerate}
+
+\end{aufgabe}
+\vspace{.5cm}
+\begin{aufgabe}[Kuppelsto{\ss}/Crash]
+Ein dreiteiliger Metro-Triebzug ($m_{w} = 50 \, \mathrm{t}$) soll mit einer automatischen Mittelpufferkupplung ausgestattet werden, die Kuppeln mit $v = 4 \frac{\mathrm{km}}{{h}}$ zul\"asst. Der maximale Hub der Frontkupplung sei auf $s_{max} = 50 \mathrm{mm}$ begrenzt, die Zwischenkupplungen seien starr. Das stehende Fahrzeug ist w\"ahrend des Kuppelns mit der selbstt\"atigen Bremse gebremst.
+\begin{enumerate}[a)]
+\item Welche Kraft muss \"uber den Verz\"ogerungsweg durchschnittlich herrschen, um die dieses Kuppeln zuzulassen? Hierbei sei die Energie ausschlie{\ss}lich \"uber die Kupplung verzehrt.
+\item Was geschieht mit dem stehenden Fahrzeug?
+\item Welche Verz\"ogerung herrscht unter den Annahmen von Aufgabe a) im fahrenden Fahrzeug?
+\item Bei einem Crash mit einem baugeichen Fahrzeug 
+%mit $v = 18 \frac{\mathrm{km}}{{h}}$ 
+gem\"a{\ss} EN15227 stehen Energieverzehrelemente mit einem Hub von $s = 200 \mathrm{mm}$ zur Verf\"ugung. Welche Verz\"ogerung und welche Kraft stellt sich ein?
+\end{enumerate}
+\end{aufgabe}
+\end{document}

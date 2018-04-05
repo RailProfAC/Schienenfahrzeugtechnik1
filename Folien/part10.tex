@@ -1,0 +1,285 @@
+% !TEX root = SFV-14033_SFT1.tex
+\section{Fahrzeugkonstruktion}
+\sectionpage
+
+\subsection{Bauformen}
+\subsectionpage
+\frame{\frametitle{Konstruktionsprinzipien der Wagenk\"asten}
+\framesubtitle{}
+\begin{columns}[t] 
+\begin{column}[T]{.5cm}
+\end{column} 
+     \begin{column}[T]{5.5cm} 
+     \textbf{Differenzialbauweise}
+     	\begin{itemize}
+     		\item Fertigung aus Halbzeugen:
+		\begin{itemize}
+		\item Einzelteile einfach geformt
+		\item Formgebung durch F\"ugen und Umformen
+		\end{itemize}
+     	\end{itemize}
+	\textbf{Integralbauweise}
+     	\begin{itemize}
+     		\item Fertigung aus komplex geformten Elementen:
+		\begin{itemize}
+		\item z.B. Strangpressprofile
+		\item Formgebung durch F\"ugen und Zerspanen
+		\end{itemize}
+     	\end{itemize}
+	\textbf{Tragfunktion}
+     	\begin{itemize}
+     		\item Tragendes Untergestell
+		\item Selbsttragender Wagenkasten
+	\end{itemize}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+            		\includegraphics[width=0.8\textwidth]{Integral}\rotatebox{90}{\tiny \color{gray} Quelle: Siemens Pressebild}\\
+		Wagenkasten in Integralbauweise
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+
+
+\subsection{Begrenzungen}
+\subsectionpage
+
+\frame{\frametitle{Lichtraumprofil streckenseitig}
+\framesubtitle{}
+\begin{columns}[t] 
+     \begin{column}[T]{6cm} 
+     	\begin{itemize}
+		\item Streckenseitiges Lichtraumprofil muss ber\"ucksichtigen
+		\begin{itemize}
+		\item Beladungszust\"ande
+		\item Dynamische Bewegungen:
+		\begin{itemize}
+		\item Ein-/Ausfedern
+		\item Wanken
+		\item Nicken
+		\end{itemize}
+		\item Bogenfahrt
+		\item Kompatibilit\"at mit anderen Fahrzeugen
+		\end{itemize}
+     		\item Deutsches Regelprofil: G2
+		\item Europ\"aisch: G1
+		\item Betrieblich Ladema{\ss}\"uberschreitungen m\"oglich
+     	\end{itemize}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+			\only<1>{
+            		\includegraphics[width=0.9\textwidth]{G2Strecke}\source{Quelle: Christian Lindecke} \\
+			\small Lichtraumprofil G2 gem\"a{\ss} EBO}
+			\only<2>{\includegraphics[width=0.9\textwidth]{TGCan}\\
+			\small Kanadisches Lichtraumprofil}
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+
+\frame{\frametitle{Fahrzeugbegrenzung: Querschnitt}
+\framesubtitle{}
+         	\begin{center}
+            		\includegraphics[width=0.8\textwidth]{G1G2}\source{Quelle: Christian Lindecke}
+        		\end{center}
+     }
+
+
+\offslide{Breiteneinschr\"ankung und Lichtraumbedarf}
+
+\frame{\frametitle{Radsatzlasten und Meterlasten}
+\framesubtitle{}
+\begin{columns}[t] 
+     \begin{column}[T]{6cm} 
+     	\begin{itemize}
+     		\item Beschr\"ankung der Radsatzlast:
+		\begin{itemize}
+		\item Gem\"a{\ss} Streckenkategorie
+		\item Normativ, z.B. TSI Loc\&Pas (f\"ur HGV), EN 15528
+		\end{itemize}
+		\item Beschr\"ankung der Streckenlast
+		\begin{itemize}
+		\item z.B. f\"ur Br\"uckenbauwerke, Oberbau
+		\end{itemize}
+     	\end{itemize}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+		\begin{tabular}{|c|c|c|}
+		\hline
+			Klasse & Radsatzlast & Meterlast \\ \hline
+			A & 16 t & 5{,}0 t/m \\ \hline
+			B1 & 18 t & 5{,}0 t/m \\ \hline
+			B2 & 18 t & 6{,}4  t/m \\ \hline
+			C2 & 20 t & 6{,}4  t/m \\ \hline
+			C3 & 20 t & 7{,}2  t/m \\ \hline
+			C4 & 20 t & 8{,}0  t/m \\ \hline
+			D2 & 22{,}5 t & 6{,}4  t/m \\ \hline
+			D3 & 22{,}5 t & 7{,}2  t/m \\ \hline
+			D4 & 22{,}5 t & 8{,}0  t/m \\ \hline
+			E4 & 25 t & 8{,}0  t/m \\ \hline
+			E5 & 25 t & 8{,}8  t/m \\ \hline
+		\end{tabular}
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+
+\offslide{L\"angen- und Gewichtseinschr\"ankungen}
+
+\subsection{Wagenkastenrohbau}
+\subsectionpage
+\frame{\frametitle{Anforderungen an den Wagenkasten \textit{car body}}
+\framesubtitle{}
+\begin{itemize}
+\item Festigkeit (EN 12663):
+\begin{itemize}
+	\item Zug-/Druckkr\"afte im Zugverband
+	\item Crash-Szenarien (EN 15227)
+	\item Drucks\"o{\ss}e, Druckdichtigkeit
+	\item Durchbiegung unter Beladung
+	\item Schwingungen
+\end{itemize}
+\item Kunden-/ betriebliche Anforderungen
+\begin{itemize}
+	\item Lebensdauer
+	\item Reparaturfreundlichkeit, Ersatzteilverf\"ugbarkeit
+	\item Geringe Masse
+	\item Design
+	\item Entsorgung/Recycling
+\end{itemize}
+\item Normative/gesetzliche Anforderungen
+\begin{itemize}
+	\item Brandschutz (DIN 5510, EN 45545, ...)
+	\item Material (EG 1907/2006 REACH)
+	\item Crash und Festigkeit s.o.
+\end{itemize}
+\item Systemimmanente Anforderungen (Schwingungen, elastische Verformung,...)
+\end{itemize}
+}
+
+
+
+\frame{\frametitle{Leichtbau der Wagenk\"asten}
+\framesubtitle{}
+\begin{itemize}
+\item Alle Elemente an Aufnahme der Beanspruchungen beteiligen
+\item Gut (leicht) ertragbar:
+\begin{itemize}
+	\item Zug- und Druckkr\"afte
+\end{itemize}
+\item Mit zus\"atzlichem Material ertragbar:
+\begin{itemize}
+	\item Torsions- und Biegemomente
+\end{itemize}
+\item H\"oherfeste Materialien werden z\"ogerlich angenommen
+\begin{itemize}
+	\item Bedenken bei Wartbarkeit und Lebensdauer
+\end{itemize}
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Class66}
+\end{center}
+}
+
+\frame{\frametitle{Werkstoffe f\"ur Wagenk\"asten}
+\framesubtitle{}
+\begin{itemize}
+\item Stahl:
+\begin{itemize}
+	\item Klassisch eingesetzt: Baust\"ahle S235, S355
+	\item Ebenfalls anzutreffen: Edelst\"ahle, z.B. X5CrNi18-10
+	\item Gut zu f\"ugen und umzuformen
+	\item Dauerfestigkeit und elastisch/plastisches Verhalten gutm\"utig
+\end{itemize}
+\item Aluminium:
+\begin{itemize}
+	\item Geringere Dichte, geringerer E-Modul
+	\item Dauerfestigkeitsgrenze wenig ausgepr\"agt
+	\item Schwei{\ss}n\"ahte wenig erm\"udungsfest
+	\item F\"ugeverfahren erfordern getrennte Behandlung von Stahl
+\end{itemize}
+\item Kunststoffe:
+\begin{itemize}
+	\item In der Regel faserverst\"arkt (GFK, CFK)	
+	\item Erm\"oglichen Integralbauweise und Funktionsintegration
+	\item Auch als Sandwichmaterialien
+\end{itemize}
+\item Waben und Schaummaterialien:
+\begin{itemize}
+	\item Eingesetzt im Deformationsbereich
+\end{itemize}
+\end{itemize}
+}
+
+\frame{\frametitle{Hauptbaugruppen des Rohbaus}
+\framesubtitle{}
+\begin{columns}[t] 
+     \begin{column}[T]{6cm} 
+     	\begin{itemize}
+     		\item Untergestell
+		\begin{itemize}
+		\item (Mittel/Aussen-) Langtr\"ager
+		\item Quertr\"ager
+		\end{itemize}
+		\item Seitenw\"ande
+		\begin{itemize}
+		\item Druckwechselbelastung
+		\end{itemize}
+		\item Dach
+		\begin{itemize}
+		\item Wasserablauf
+		\end{itemize}
+		\item Endw\"ande
+		\begin{itemize}
+		\item Schnittstellen, Crash
+		\end{itemize}
+		\item Kopfmodule
+		\begin{itemize}
+		\item Vorfertigung, Schnittstellen, Crash
+		\end{itemize}
+     	\end{itemize}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+            		\includegraphics[width=0.8\textwidth]{FrontNose}
+		\rotatebox{90}{\tiny \color{gray}{Quelle: Voith Pressebild}}
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+
+\frame{\frametitle{Prozess Wagenkastenfertigung}
+\framesubtitle{Bei allen Schritten zu beachten: Teils extremer Verzug durch W\"armeeinleitung}
+\begin{columns}[t] 
+     \begin{column}[T]{6cm} 
+     	\begin{enumerate}
+     		\item Einzelteilfertigung
+		\begin{itemize}
+		\item Schneiden, Schwei{\ss}nahtvorbereitung, Kanten, etc.
+		\end{itemize}
+		\item Baugruppenfertigung
+		\begin{itemize}
+		\item Schwei{\ss}en, evtl. Bearbeitung
+		\item Hand- oder Roboterschwei{\ss}en je nach Naht
+		\item Vermessung
+		\end{itemize}
+		\item Wagenkastenaufbau
+		\begin{itemize}
+		\item Vorsprengung bei statischer Durchbiegung
+		\item Dichtigkeitspr\"ufung
+		\end{itemize}
+		\item Richten
+		\item Sandstrahlen
+     	\end{enumerate}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+            		\includegraphics[width=0.8\textwidth]{Rohbau}\rotatebox{90}{\tiny \color{gray} Quelle: Siemens Pressebild}\\  
+		Pr\"ufen der Aussenkontur     		
+		\end{center}
+     \end{column}
+ \end{columns}
+}

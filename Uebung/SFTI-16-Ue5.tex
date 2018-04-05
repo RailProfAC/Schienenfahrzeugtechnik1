@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper,headsepline]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\usepackage[scaled]{helvet}
+\usepackage{paralist}
+\usepackage{pdfpages}
+
+\usetikzlibrary{calc}
+\newtheorem{aufgabe}{Aufgabe}
+
+\renewcommand*\familydefault{\sfdefault}
+\renewcommand{\arraystretch}{1.1}
+
+\title{\"Ubung L\"angsdynamik}
+\date{}
+\makeatletter
+\let\Title\@title
+\let\Author\@author
+\makeatother
+\pagestyle{fancy}
+\fancyhead[L]{Prof. Dr. Raphael Pfaff}
+\fancyhead[R]{84111: Schienenfahrzeugtechnik}
+\fancyfoot[L]{Datei: \jobname}
+\fancyfoot[R]{Datum: \today \vspace{.1cm}
+\begin{picture}(0,0)(0,0)\put(.5,1){\includegraphics[height=5cm]{fh_logo}}\end{picture}}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\vspace{-2cm}
+
+\begin{aufgabe}
+Eine Lokomotive der BR 143 zieht einen Wagenzug. Die technischen Daten der Fahrzeuge sind:
+\begin{itemize}
+	\item Triebfahrzeug:
+	\begin{itemize}
+		\item Masse $m_{L} = 82\, \mathrm{ t}$
+		\item Rotierende Masse $m_{DL} = 16\, \mathrm{ t}$
+	\end{itemize}
+	\item Wagenzug:
+	\begin{itemize}
+		\item Masse $m_{W} = 500\, \mathrm{t}$
+		\item Rotierende Masse $m_{DW} = 24\, \mathrm{t}$
+	\end{itemize}
+\end{itemize}
+
+\pgfplotsset{width=10 cm}
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[ylabel={$F_{T}/kN$},
+		xlabel = {$v/ms^{-1}$}
+		%legend, %style={at={(1.5,1)}},
+		%anchor=north, legend columns=3},
+		%xtick=data
+		]]
+		\addplot coordinates
+			{(0,244) (2.78, 223) (5.55,207) (8.33, 196) (11.11, 189) (13.89, 183) (16.67, 178) (19.44, 174) (22.22, 170) (25, 168) (26.11, 167) (27.78, 144) (29.17, 129) (30.56, 117) (31.94, 107) (33.33, 100)};
+			\addplot coordinates
+			{(0,11.2) (2.78, 11.5) (5.55, 12.5) (8.33, 13.3) (11.11, 14.8) (13.89, 16.7) (16.67, 18.9) (19.44, 21.6) (22.22, 24.6) (25, 28) (26.11,29.4 ) (27.78, 31.7) (29.17, 33.8) (30.56, 35.9) (31.94, 38.1) (33.33, 40.5)};
+			%\addplot coordinates %2%-Gefaelle
+			%{(0,111.2) (2.78, 111.5) (5.55, 112.5) (8.33, 113.3) (11.11, 114.8) (13.89, 116.7) (16.67, 118.9) (19.44, 121.6) (22.22, 124.6) (25, 128) (26.11,129.4 ) (27.78, 131.7) (29.17, 133.8) (30.56, 135.9) (31.94, 138.1) (33.33, 140.5)};
+		\legend{$F_{T}(v)$, $F_{WZ}(v)$};
+		\end{axis}
+\end{tikzpicture}
+\end{center}
+
+	\begin{itemize}[a)]
+		\item Zeichnen Sie die Widerstandskurven des Zugverbands (bestehend aus Lokomotive und Wagenzug) f\"ur Streckenneigungen $i_{k} = (2, 4) \%$, $k = 1,2$ in das $F-v$-Diagramm ein. Der Fahrwiderstand des Triebfahrzeugs ist zu vernachl\"assigen.
+			\item Bestimmen Sie die H\"ochstgeschwindigkeiten $v_{max, k}$ in den jeweiligen Streckenneigungen.
+		\item Bestimmen Sie das Beschleunigungsverm\"ogen des Zugverbands in der Ebene und in 1\% Streckenneigung f\"ur $v = 90\, \mathrm{km/h}$.
+		\item Bestimmen Sie die Ausnutzung des Rad-Schiene-Kraftschluss f\"ur das Erreichen des maximalen Beschleunigungsverm\"ogens.
+		\end{itemize}
+\end{aufgabe}
+\end{document}

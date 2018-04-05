@@ -1,0 +1,109 @@
+% !TEX root = SFV-14033_SFT1.tex
+\section{System\"uberblick}
+\frame{\sectionpage}
+
+\frame{\frametitle{Definition Schienenfahrzeug}
+\framesubtitle{Definition gem\"a{\ss} DIN 25003}
+\begin{definition}[Schienenfahrzeuge \textit{rail vehicles}]
+Spurgebundene Fahrzeuge, die mit Spurkranz versehenen R\"adern auf Gleisen, die aus Schienen einer bestimmten gleichbleibenden Spurweite gebildet sind, gef\"uhrt und getragen werden.
+\end{definition}
+Unterscheidung:
+\begin{itemize}
+	\item Eisenbahnfahrzeuge (gem\"a{\ss} AEG und EBO/ESBO)
+	\item Strassenbahnen (gem\"a{\ss} PBefG und BOSTRAB)
+	\item Nicht \"offentliche Bahnen (z.B. Werksbahnen) (gem\"a{\ss} BOA und EBOA)
+\end{itemize}
+}
+
+% Din 25003
+%Einführung in die Verkehrstechnik
+%Zahlen und Fakten zum Verkehr
+%Abgrenzung zur Fördertechnik
+%Grundfunktionen des Schienenfahrzeugs
+\subsection{Systematik}
+\subsection{Systematik der Eisenbahnen}
+\frame{\frametitle{Systematik des Eisenbahnverkehrs}
+\framesubtitle{}
+\begin{center}
+\begin{tikzpicture}[thick]
+		%\tiny
+  \node[draw,rectangle, anchor = west] (a) {Eisenbahnen};
+  \node[element, below of = a, left of = a, anchor = east] (b) {Personenverkehr};
+  \node[element, below of = a, right of = a, anchor = west] (c) {G\"uterverkehr};
+ 
+   \node[element, below of = b, left of = b, anchor = east] (e) {Fernverkehr}; 
+  \node[element, below of= e](f) {Regionalverkehr};
+  \node[element, below of=f] (g) {Intercity-Verkehr};
+  \node[element, below of=g] (h) {Hochgeschwin-digkeitsverkehr};
+  
+  
+  
+ \node[element, below of = b, right of = b, anchor = west] (j) {Nahverkehr};
+  \node[element, below of= j](k) {Stra{\ss}enbahn \\ \textit{Tram}};
+  \node[element, below of=k] (l) {U-Bahn \\ \textit{Metro}};
+
+%\node[element, below of=k] (l) {Triebzug \textit{Multiple Unit}};
+ 
+
+    \draw[-] (a) -| (b);
+     \draw[-] (a) -| (c);
+    
+    \draw[-] (b) -| (e);
+    \draw[-] (b) -| (j); 
+    
+    \draw[-] (e) -- (f);
+    \draw[-] (f) -- (g);
+    \draw[-] (g) -- (h);
+    
+    \draw[-] (j) -- (k);
+    \draw[-] (k) -- (l);
+    
+\end{tikzpicture}
+\end{center}
+}
+
+\subsubsection{Systematik der Eisenbahnfahrzeuge}
+\frame{\frametitle{Systematik der Eisenbahnfahrzeuge}
+\framesubtitle{}
+\begin{center}
+\tikzstyle{element} = [draw,rectangle, align = center, text width = 2.5 cm, node distance = 1.25 cm]
+\begin{tikzpicture}[thick]
+		%\tiny
+  \node[draw,rectangle] (a) {Eisenbahnfahrzeuge};
+  \node[right of = a] (a1) {};
+  \node[draw,rectangle, below of=a, minimum width = 4 cm, left of = a, anchor = east] (b) {Regelfahrzeuge};
+  \node[left of = b] (b1) {};
+  \node[right of = b] (b2) {};
+  \node[draw,rectangle,below of=a, right of = a, anchor = west] (c) {Nebenfahrzeuge}; 
+   \node[element, below of=b, left of = b, anchor = east] (d) {Wagen};
+    \node[element, below of=d] (f) {G\"uterwagen \\ \textit{wagons}};
+\node[element, below of=f] (g) {Reisezugwagen \textit{coaches}};
+\node[element, below of=g] (h) {Sonstige \\ \textit{others}};
+
+  \node[element, below of = b, right of = b, anchor = west] (e) {Triebfahrzeuge}; 
+  \node[element, below of=e] (j) {Lokomotiven \textit{locomotives}};
+\node[element, below of=j] (k) {Triebwagen \textit{railcar}};
+\node[element, below of=k] (l) {Triebzug \textit{Multiple Unit}};
+ 
+
+    \draw[-] (a) |- (b);
+    \draw[-] (a) |- (c);
+    \draw[-] (b) |- (d);
+    \draw[-] (b) |- (e);
+    
+    \draw[-] (d) -- (f);
+    \draw[-] (f)  -- (g);
+    \draw[-] (g) -- (h);
+    
+    \draw[-] (e) -- (j);
+    \draw[-] (j)  -- (k);
+    \draw[-] (k) -- (l);
+  
+\end{tikzpicture}
+\end{center}
+}
+
+%\offslide{Fahrzeuggattungen}{Tafelbild 6}
+
+
+

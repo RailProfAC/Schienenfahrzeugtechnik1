@@ -1,0 +1,140 @@
+\documentclass[slidestop,compress,mathserif, handout]{beamer}
+\usepackage{etex}
+\usepackage[bars]{beamerthemetree} % Beamer theme v 2.2
+\usetheme{Madrid} % Beamer theme v 3.0
+\usecolortheme{seagull} % Beamer color theme
+\usepackage{bibentry}
+\usepackage[round]{natbib}
+\usepackage{graphicx}
+\usepackage{epigraph}
+\usepackage{makeidx}
+\usepackage{svg}
+\makeindex
+\usepackage[]{amsmath}
+\usepackage{pgfcalendar}
+\usepackage[]{amssymb}
+\usepackage{color}
+\usepackage{pict2e}
+\usepackage{algorithm2e}
+\usepackage[ngerman]{babel}
+\usepackage{tikz}
+\usetikzlibrary{decorations}
+\usetikzlibrary{calc}
+\usetikzlibrary{scopes}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{mindmap}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{multimedia}
+\usepackage{xcolor}
+\usepackage{keyval}
+\usepgfmodule{shapes}
+\usepackage{sfmath}
+\usepackage{pgfplots}
+\usepackage{sansmath}
+\usepackage{siunitx}
+\usepackage{multirow}
+
+\definecolor{blue}{rgb}{0,0,1}
+\definecolor{mint}{cmyk}{75,0,40,0}
+\definecolor{mint}{rgb}{32,178,170}
+\graphicspath{{../../../figures/}}
+
+\input{Symbols}
+
+%\mode<handout>{
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{9 on 1}[a4paper,border shrink=5mm]
+%}
+
+%\AtBeginSection{\frame{\sectionpage}}
+\newtranslation[to=ngerman]{Section}{Teil}
+\newtranslation[to=ngerman]{Subsection}{Abschnitt}
+
+\pgfplotsset{width=5cm, height = 5 cm,
+	tick label style = {font=\sansmath\sffamily},
+  every axis label = {font=\sansmath\sffamily},
+  legend style = {font=\sansmath\sffamily},
+  label style = {font=\sansmath\sffamily}}
+%\definecolor{RYB1}{RGB}{240,249,232}
+%\definecolor{RYB2}{RGB}{186,228,188}
+%\definecolor{RYB3}{RGB}{123,204,196}
+%\definecolor{RYB4}{RGB}{67,162,202}
+%\definecolor{RYB5}{RGB}{18,104,172}
+%
+%\definecolor{RYB11}{RGB}{141,211,199}
+%\definecolor{RYB12}{RGB}{255,255,179}
+%\definecolor{RYB13}{RGB}{190,186,218}
+%\definecolor{RYB14}{RGB}{251,128,114}
+%\definecolor{RYB15}{RGB}{128,177,211}
+%\definecolor{RYB16}{RGB}{253,180,98}
+%\definecolor{RYB17}{RGB}{179,222,105}
+%\definecolor{RYB18}{RGB}{252,205,229}
+%\definecolor{RYB19}{RGB}{217,217,217}
+%\definecolor{RYB20}{RGB}{188,128,189}
+%\definecolor{RYB21}{RGB}{204,235,197}
+%\definecolor{RYB22}{RGB}{255,237,111}
+%
+%
+\begin{document}
+\tikzstyle{element} = [draw,rectangle, align = center, text width = 2.5 cm, node distance = 1.25 cm]
+
+\newcommand\mydots{\makebox[1em][c]{.\hfil.\hfil.}}
+
+%% Formalia
+\newcommand{\revision}{Rev. 02}
+\newcommand{\docnum}{SFV-14033}
+\newcommand{\offslide}[2]{\frame{\frametitle{ \includegraphics[scale=0.01] {Off}\hspace{1.5mm} #1}
+\framesubtitle{#2}
+}}
+\newcommand{\source}[1]{\rotatebox{90}{\tiny \color{gray} #1}}
+
+
+\title{84111 Schienenfahrzeugtechnik I}
+\subtitle{}
+\author[R. Pfaff]{Prof. Dr. Raphael Pfaff}
+\institute[Dokument \docnum, \revision]{Fachhochschule Aachen}
+\logo{\put(-362, 0){\includegraphics[width=0.6cm]{logo.jpg}}}
+
+% Pr\"aliminarien
+\include{part1}
+
+%%System\"uberblick
+%\include{part2}
+%
+%% Grundlagen
+%\include{part3}
+%
+%% Anforderungen
+%\include{part4}
+
+% G\"uterwagen
+\include{part5}
+
+% Personenfahrzeuge
+\include{part6}
+
+% Einf\"uhrung Zugdynamik
+\include{part7}
+% Zugdynamik
+\include{part9}
+
+% Einf\"uhrung Spurf\"uhrung
+\include{part8}
+
+%Fahrzeugkonstruktion
+\include{part10}
+
+%Laufwerk
+\include{part11}
+
+
+
+\frame[allowframebreaks]{\frametitle{Literatur}
+\framesubtitle{}
+\nocite{wende}
+\bibliographystyle{plainnat}
+\bibliography{../../../bib}
+}
+
+\end{document}

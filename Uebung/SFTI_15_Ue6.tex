@@ -1,0 +1,125 @@
+\documentclass[10pt,a4paper,headsepline,smallheadings]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[scaled]{helvet}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{textcomp}
+\usepackage{pdflscape} 
+\usepackage{marvosym}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage[siunitx,european,cuteinductors,smartlabels]{circuitikz}
+\usepackage{fancyhdr}
+\usepackage{pgfplots}
+\usepackage{sansmath}
+\usetikzlibrary{shapes.geometric}
+\usepackage{wasysym}
+
+\usetikzlibrary{calc}
+
+
+\theoremstyle{definition}
+\newtheorem{aufgabe}{Aufgabe}
+
+
+\renewcommand*\familydefault{\sfdefault}
+\renewcommand{\arraystretch}{1.1}
+
+
+\KOMAoptions{parskip=half,DIV=15,fontsize=11pt}
+\unitlength1cm
+\titlehead{
+
+\begin{center}\begin{tabular}{p{10cm}p{6.8cm}}
+\textbf{FH Aachen} & \textbf{FB Maschinenbau und Mechatronik}\\[0.5cm]
+\textbf{Modul 84111} &  Prof. Dr. Raphael Pfaff\\
+Schienenfahrzeugtechnik I& Sommersemester 2015\\
+\end{tabular}
+
+\end{center}
+\begin{picture}(0,0)(0,0)\put(17,-23){\includegraphics[height=5cm]{fh_logo}}\end{picture}
+}
+\newif\ifuelsg %als slides
+%\uelsgtrue
+\uelsgfalse
+\newif\ifnotuelsg
+\ifuelsg\notuelsgfalse\else\notuelsgtrue\fi
+
+
+%\titlehead{83105 \hfill Mess-Steuerungs- und Regelungstechnik \hfill Prof. Manfred Enning}
+\title{Schienenfahrzeugtechnik I  -- \"Ubung 6}
+\date{}
+\makeatletter
+\let\Title\@title
+\let\Author\@author
+\makeatother
+\pagestyle{fancy}
+\fancyhead[LE, LO]{Prof. Dr. Raphael Pfaff}
+\fancyhead[RE, RO]{\Title}
+
+\begin{document}
+\thispagestyle{empty}
+\maketitle
+\vspace{-2cm}
+% \hyphenation{Abwei-chungen}
+
+\section*{L\"angsdynamik}
+
+\begin{aufgabe}[Radsatzwellen]
+Sizzieren Sie die Verl\"aufe der Momente $M_{x}$ und $M_{z}$ entlang der Radsatzwelle f\"ur folgende F\"alle:
+\begin{enumerate}
+\item Aussengelagert:
+	\begin{enumerate}[a)]
+	\item Klotzbremse einseitig auf das Rad wirkend
+	\item Klotzbremse beidseitig auf das Rad wirkend
+	\item Eine Wellenbremsscheibe
+	\item Zwei Wellenbremsscheiben
+	\item Zwei Radbremsscheiben
+	\end{enumerate}
+\item Innengelagert:
+	\begin{enumerate}[a)]
+	\item Klotzbremse einseitig auf das Rad wirkend
+	\item Klotzbremse beidseitig auf das Rad wirkend
+	\item Eine Wellenbremsscheibe
+	\item Zwei Wellenbremsscheiben
+	\item Zwei Radbremsscheiben
+	\end{enumerate}
+\end{enumerate}
+
+\end{aufgabe}
+\newpage
+\begin{aufgabe}[Rads\"atze/W\"armeeintrag]
+Ein bereiftes Rad mit Laufkreisdurchmesser $d = 920\; \mathrm{mm}$ wird in einem Gef\"alle mit einer Klotzbremse dauergebremst, um die Geschwindigkeit konstant zu halten. 
+
+\begin{itemize}
+	\item Spezifische W\"armekapazit\"at Stahl: $c = 477 \, \frac{\mathrm{J}}{\mathrm{kg}\, \mathrm{K}}$
+	\item Geschwindigkeit: $v = 70\, \frac{\mathrm{km}}{\mathrm{h}}$
+	\item Radsatzlast: $ 2 Q = 22{,5} \, \mathrm{t}$
+	\item Streckenneigung: $i_{k} = \{2, 4\} \%$
+\end{itemize}
+\begin{enumerate}[a)]
+\item Bestimmen Sie den Leistungseintrag der Klotzbremse w\"ahrend der Beharrungsbremsung in den beiden angegeben Streckenneigung unter folgenden Annahmen:
+	\begin{itemize}
+		\item Es findet kein Transfer von abzubremsenden Massen statt, d.h. jedes Rad bremst sich selbst
+		\item Die Verbundsohle nimmt 10 \% des Leistungseintrags auf
+	\end{itemize}
+\item Bestimmen Sie die Temperaturentwicklung im Radreifen unter folgenden Annahmen:
+	\begin{itemize}
+		\item Keine W\"armeleitung in den Radsteg
+		\item Radreifendicke: $d = 90 \, \mathrm{mm}$ 
+		\item Radbreite: $b = 140 \, \mathrm{mm}$
+	\end{itemize}
+\end{enumerate}
+\end{aufgabe}
+
+
+\end{document}

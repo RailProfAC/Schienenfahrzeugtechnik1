@@ -1,0 +1,36 @@
+\makeatletter
+\pgfdeclareshape{loco}{
+\inheritsavedanchors[from=rectangle] % this is nearly a rectangle
+\inheritanchorborder[from=rectangle]
+\inheritanchor[from=rectangle]{center}
+\inheritanchor[from=rectangle]{north}
+\inheritanchor[from=rectangle]{base}
+\inheritanchor[from=rectangle]{south}
+\inheritanchor[from=rectangle]{west}
+\inheritanchor[from=rectangle]{east}
+\backgroundpath{
+\southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+\northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+\pgf@ya=\pgf@ya \advance\pgf@ya by 4pt
+\pgf@xc=\pgf@xb \advance\pgf@xc by-3pt % this should be a parameter
+\pgf@yc=\pgf@yb \advance\pgf@yc by-7pt
+%\pgf@xd=\pgf@xa \advance\pgf@xc by+3pt % this should be a parameter
+% construct main path
+\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
+\pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yc}}
+\pgfpathlineto{\pgfpoint{\pgf@xa+3pt}{\pgf@yb}}
+\pgfpathlineto{\pgfpoint{\pgf@xc}{\pgf@yb}}
+\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yc}}
+\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+\pgfpathclose
+\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya-1pt}}
+\pgfpathlineto{\pgfpoint{\pgf@xa+10pt}{\pgf@ya-1pt}}
+\pgfpathmoveto{\pgfpoint{\pgf@xb}{\pgf@ya-1pt}}
+\pgfpathlineto{\pgfpoint{\pgf@xb-10pt}{\pgf@ya-1pt}}
+\pgfpathcircle{\pgfpoint{\pgf@xb-7pt}{\pgf@ya-2.5pt}}{1.5pt}
+\pgfpathcircle{\pgfpoint{\pgf@xb-10pt}{\pgf@ya-2.5pt}}{1.5pt}
+%\pgfpathcircle{\pgfpoint{\pgf@xa+7pt}{\pgf@ya-2.5pt}}{1.5pt}
+%\pgfpathcircle{\pgfpoint{\pgf@xa+3pt}{\pgf@ya-2.5pt}}{1.5pt}
+}
+}
+\makeatother
