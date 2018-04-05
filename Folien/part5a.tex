@@ -1,0 +1,145 @@
+% !TEX root = SFV-15014_HuV.tex
+\section{Requirements Engineering}
+\sectionpage
+
+\frame{\frametitle{Warum Requirements Engineering (RE)?}
+\framesubtitle{Requirements Engineering befasst sich mit dem systematischen Erfassen, Umsetzen und Pr\"ufen von Anforderungen im Entwicklungsprozess.}
+\begin{itemize}
+\item Qualit\"at: Qualit\"at ist das Ma{\ss} der Erf\"ullung der Anforderungen an ein Produkt.
+\item Kosten- und Termintreue
+\item Einbindung der Stakeholder (Anspruchsteller)
+\item Systematisierung der Beschaffung und des Engineerings
+ 
+\end{itemize}
+}
+
+\frame{\frametitle{Key-Aspects of Requirements Engineering}
+\framesubtitle{}
+\begin{itemize}
+\item Stakeholder Involvement
+\item Technical Reviews
+\item Traceability
+\end{itemize}
+}
+
+%\offslide{Generisches Phasenmodell}{Modell einer beliebigen Phase eines Entwicklungsprozesses}
+
+\frame{\frametitle{Generisches Phasenmodell}
+\framesubtitle{Modell einer beliebigen Phase eines Entwicklungsprozesses}
+\begin{columns}[t] 
+     \begin{column}[T]{5cm} 
+     \textbf{F\"ur jede Phase festzulegen:}
+     	\begin{itemize}
+     		\item Purpose
+		\item Inputs
+		\item Entry Criteria
+		\item Roles
+		\item Verification steps
+		\item Outputs
+		\item Exit criteria
+		\item Resources
+		\item Management review activities
+     	\end{itemize}
+     \end{column}
+     	\begin{column}[T]{7cm} 
+         	\begin{center}
+            		\includegraphics[width=1.0\textwidth]{Phase.png}
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+
+\offslide{V-Modell f\"ur Requirements Engineering}
+
+\frame{\frametitle{Requirements Analysis}
+\framesubtitle{Ermitteln der System Level Requirements}
+\begin{columns}[t] 
+     \begin{column}[T]{6cm} 
+     \textbf{Leitfragen:}
+     	\begin{itemize}
+		\item What are the stakeholders?
+     		\item What is the system to do?
+		\item How well it is to do it?
+		\item Under what conditions?
+     	\end{itemize}
+	\textbf{Typischer Meilenstein: Initial Design Review (IDR)}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+            		\includegraphics[width=0.95\textwidth]{Phase}
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+
+%\offslide{Erg\"anzen des generischen Phasenmodells}{}
+
+\frame{\frametitle{System Specification}
+\framesubtitle{Top Level Design: Architektur, L\"osungen, Subsysteme}
+\begin{columns}[t] 
+     \begin{column}[T]{6cm} 
+     \textbf{Leitfragen:}
+     	\begin{itemize}
+		\item Is the required system feasible?
+     		\item What are system and subsystem borders?
+		\item What are associated costs/lead times/risks?
+		\item How can the risk be reduced?
+		\item Which system integration steps are necessary?
+     	\end{itemize}
+	\textbf{Typischer Meilenstein: Preliminary Design Review (PDR)}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+            		\includegraphics[width=0.95\textwidth]{Phase}
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+
+%\offslide{Erg\"anzen des generischen Phasenmodells}%{Durchf\"uhrung in der \"Ubung}
+
+\frame{\frametitle{Subsystem Design}
+\framesubtitle{Lower Level Design: Architektur, L\"osungen, Module}
+\begin{columns}[t] 
+     \begin{column}[T]{6cm} 
+     \textbf{Leitfragen:}
+     	\begin{itemize}
+		\item What are the subsystem requirements?
+		\item Make or Buy?
+		\item Which deliverables (e.g. documentation) are requested?
+		\item What is the suitable subsystem structure?
+     	\end{itemize}
+	\textbf{Typischer Meilenstein: Critical Design Review (CDR)}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+            		\includegraphics[width=0.95\textwidth]{Phase}
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+
+%\offslide{Erg\"anzen des generischen Phasenmodells}%{Durchf\"uhrung in der \"Ubung}
+
+\frame{\frametitle{Module Design}
+\framesubtitle{``Build to Specifications'': Zeichnungen, Schemata,...}
+\begin{columns}[t] 
+     \begin{column}[T]{6cm} 
+     \textbf{Leitfragen:}
+     	\begin{itemize}
+		\item How can the module be realised efficiently?
+		\item What are critical characteristics of the module and its parts?
+		\item Can service proven modules be used or adapted?
+     	\end{itemize}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+            		\includegraphics[width=0.95\textwidth]{Phase}
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+
+%\offslide{Erg\"anzen des generischen Phasenmodells}
+
+%ISO15288

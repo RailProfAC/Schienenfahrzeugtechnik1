@@ -1,8 +1,10 @@
-\documentclass[slidestop,compress,mathserif, handout]{beamer}
-\usepackage{etex}
-\usepackage[bars]{beamerthemetree} % Beamer theme v 2.2
-\usetheme{Madrid} % Beamer theme v 3.0
+\documentclass[slidestop,compress,mathserif, aspectratio = 169]{beamer}
 \usecolortheme{seagull} % Beamer color theme
+\useinnertheme{rectangles}
+\usepackage{etex}
+%\usepackage[bars]{beamerthemetree} % Beamer theme v 2.2
+%\usetheme{Madrid} % Beamer theme v 3.0
+%\usecolortheme{seagull} % Beamer color theme
 \usepackage{bibentry}
 \usepackage[round]{natbib}
 \usepackage{graphicx}
@@ -94,25 +96,31 @@
 \subtitle{}
 \author[R. Pfaff]{Prof. Dr. Raphael Pfaff}
 \institute[Dokument \docnum, \revision]{Fachhochschule Aachen}
-\logo{\put(-362, 0){\includegraphics[width=0.6cm]{logo.jpg}}}
-
+\logo{\put(-18, 170){\includegraphics[width=1.4cm]{logoR}}}
 % Pr\"aliminarien
 \include{part1}
-
+%
 %%System\"uberblick
 %\include{part2}
 %
 %% Grundlagen
 %\include{part3}
-%
-%% Anforderungen
-%\include{part4}
+
 
 % G\"uterwagen
 \include{part5}
 
 % Personenfahrzeuge
 \include{part6}
+
+% Anforderungen
+\include{part5a}
+
+%Fahrzeugkonstruktion
+\include{part10}
+
+%Laufwerk
+\include{part11}
 
 % Einf\"uhrung Zugdynamik
 \include{part7}
@@ -122,19 +130,12 @@
 % Einf\"uhrung Spurf\"uhrung
 \include{part8}
 
-%Fahrzeugkonstruktion
-\include{part10}
-
-%Laufwerk
-\include{part11}
-
-
 
 \frame[allowframebreaks]{\frametitle{Literatur}
 \framesubtitle{}
 \nocite{wende}
 \bibliographystyle{plainnat}
-\bibliography{../../../bib}
+\bibliography{../../../../bib}
 }
 
 \end{document}
