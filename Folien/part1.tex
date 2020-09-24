@@ -1,4 +1,6 @@
-% !TEX root = SFV-14033_SFT1.tex
+% !TEX root = SFT1-Skript.tex
+% !TEX root = SFT1-Folien.tex
+
 \section{Pr\"aliminarien}
 
 %\begin{frame}[plain]
@@ -11,11 +13,7 @@
 %\end{frame}
 
 
-\begin{frame} % Cover slide
-\titlepage
-\end{frame}
-
-\frame{\sectionpage}
+\only<beamer>{
 
 \frame{\frametitle{Prof. Dr. Raphael Pfaff}
 \framesubtitle{Lehr- und Forschungsgebiet Schienenfahrzeugtechnik}
@@ -131,92 +129,92 @@
      \end{column}
  \end{columns}
 }
-
-\frame{\frametitle{Wie schaffen? - Growth Mindset!}
-\framesubtitle{Theorie der Psychologin Carol Dweck, Harvard \cite{mindset}}
-\begin{columns}[t] 
-     \begin{column}[T]{6cm} 
-     \textbf{Fixed Mindset:} 
-     	\begin{itemize}
-     		\item F\"ahigkeiten,
-		\item Intelligenz und
-		\item Talent 
-     	\end{itemize}
-	sind feste Pers\"onlichkeitsmerkmale und nicht \"anderbar. Daher das Bestreben, nicht dumm zu wirken.
-     \end{column}
-     	\begin{column}[T]{6cm} 
-	\textbf{Growth Mindset:} 
-         	\begin{itemize}
-     		\item F\"ahigkeiten,
-		\item Intelligenz und
-		\item Talent 
-     		\end{itemize}
-		k\"onnen durch Anstrengung, gute Lehre und Hartn\"ackigkeit entwickelt werden. Nicht jeder ist gleich, aber jeder kann sich weiterentwickeln.
-     \end{column}
- \end{columns}
-}
-
-\frame{\frametitle{Entwicklung im Growth Mindset}
-\framesubtitle{}
-\begin{center}
-\begin{tikzpicture}[scale = .9, minimum height = 20]
-\node (fixed)[minimum width = 70, draw=red!50!black, fill = red!20, rounded corners] at ( .6,8.75) {\textcolor{red!50!black}{Fixed mindset}};
-\node (growth)[minimum width = 70, draw=green!50!black, fill = green!20, rounded corners]  at ( 4.3,8.75){\textcolor{green!50!black}{Growth mindset}};
-
-\node (challenges)[text width = 320, draw=blue!30, fill = blue!20, align = left, minimum height = 24] at ( 0,7.5) {\textcolor{blue!40!black}{Herausforderungen}};
-\node (obstacles)[text width = 320, draw=blue!30, fill = blue!20, align = left, minimum height = 24] at ( 0,6.25) {\textcolor{blue!40!black}{Hindernisse}};
-\node (effort)[text width = 320, draw=blue!30, fill = blue!20, align = left, minimum height = 24] at ( 0,5) {\textcolor{blue!40!black}{Anstrengung}};
-\node (criticism)[text width = 320, draw=blue!30, fill = blue!20, align = left, minimum height = 24] at ( 0,3.75) {\textcolor{blue!40!black}{Kritik}};
-\node (success)[text width = 320, draw=blue!30, fill = blue!20, align = left, minimum height = 24] at ( 0,2.5) {\textcolor{blue!40!black}{Erfolg anderer}};
-
-\begin{scope}[draw = red!50!black]
-\uncover<2-7>{\node (avoid)[minimum width = 70, draw, fill = red!20, rounded corners] at ( .6,7.5) {\textcolor{red!50!black}{Vermeiden}};
-\path[draw, draw=red!50, line width = 5pt] (fixed) -- (avoid);};
-\uncover<3-7>{\node (giveup)[minimum width = 70, draw, fill = red!20, rounded corners] at ( .6,6.25) {\textcolor{red!50!black}{Aufgeben}};
-\path[draw, draw=red!50, line width = 5pt] (avoid) -- (giveup);};
-\uncover<4-7>{\node (useless)[minimum width = 70, draw, fill = red!20, rounded corners] at ( .6,5) {\textcolor{red!50!black}{Nutzlos}};
-\path[draw, draw=red!50, line width = 5pt] (giveup) -- (useless);};
-\uncover<5-7>{\node (ignore)[minimum width = 70, draw, fill = red!20, rounded corners] at ( .6,3.75) {\textcolor{red!50!black}{Ignorieren}};
-\path[draw, draw=red!50, line width = 5pt] (useless) -- (ignore);};
-\uncover<6-7>{\node (threat)[minimum width = 70, draw, fill = red!20, rounded corners] at ( .6,2.5) {\textcolor{red!50!black}{Bedrohung}};
-\path[draw, draw=red!50, line width = 5pt] (ignore) -- (threat);};
-\end{scope}
-
-\begin{scope}[draw = green!50!black]
-\uncover<2-7>{\node (embrace)[draw, minimum width = 70, fill = green!20, rounded corners] at ( 4.3,7.5) {\textcolor{green!50!black}{Nutzen}};
-\path[draw,  line width = 5pt] (growth) -- (embrace);};
-\uncover<3-7>{\node (persist)[draw, minimum width = 70,  fill = green!20, rounded corners] at (4.3,6.25) {\textcolor{green!50!black}{Weitermachen}};
-\path[draw,  line width = 10pt] (embrace) -- (persist);};
-\uncover<4-7>{\node (valuable)[draw, minimum width = 70,  fill = green!20, rounded corners] at ( 4.3,5) {\textcolor{green!50!black}{Wertvoll}};
-\path[draw,  line width = 15pt] (persist) -- (valuable);};
-\uncover<5-7>{\node (learn)[draw, minimum width = 70,  fill = green!20, rounded corners] at ( 4.3,3.75) {\textcolor{green!50!black}{Lernen}};
-\path[draw,  line width = 20pt] (valuable) -- (learn);};
-\uncover<6-7>{\node (inspiration)[draw, minimum width = 70,  fill = green!20, rounded corners] at (4.3,2.5) {\textcolor{green!50!black}{Inspiration}};
-\path[draw,  line width = 25pt] (learn) -- (inspiration);};
-\end{scope}
-
-\end{tikzpicture}
-\end{center}
-}
-
-\frame{\frametitle{Rolle des Lehrenden}
-\framesubtitle{}
-\begin{columns}[t] 
-     \begin{column}[T]{6cm} 
-     \vspace{1cm}
-     	\begin{quote}
-     		A teacher is never a giver of truth; he is a guide, a pointer to the truth that each student must find for himself.
-     	\end{quote}
-	\flushright Bruce Lee
-	
-     \end{column}
-     	\begin{column}[T]{6cm} 
-         	\begin{center}
-            		\includegraphics[width=0.8\textwidth]{Bruce}
-        		\end{center}
-     \end{column}
- \end{columns}
-}
+%
+%\frame{\frametitle{Wie schaffen? - Growth Mindset!}
+%\framesubtitle{Theorie der Psychologin Carol Dweck, Harvard \cite{mindset}}
+%\begin{columns}[t] 
+%     \begin{column}[T]{6cm} 
+%     \textbf{Fixed Mindset:} 
+%     	\begin{itemize}
+%     		\item F\"ahigkeiten,
+%		\item Intelligenz und
+%		\item Talent 
+%     	\end{itemize}
+%	sind feste Pers\"onlichkeitsmerkmale und nicht \"anderbar. Daher das Bestreben, nicht dumm zu wirken.
+%     \end{column}
+%     	\begin{column}[T]{6cm} 
+%	\textbf{Growth Mindset:} 
+%         	\begin{itemize}
+%     		\item F\"ahigkeiten,
+%		\item Intelligenz und
+%		\item Talent 
+%     		\end{itemize}
+%		k\"onnen durch Anstrengung, gute Lehre und Hartn\"ackigkeit entwickelt werden. Nicht jeder ist gleich, aber jeder kann sich weiterentwickeln.
+%     \end{column}
+% \end{columns}
+%}
+%
+%\frame{\frametitle{Entwicklung im Growth Mindset}
+%\framesubtitle{}
+%\begin{center}
+%\begin{tikzpicture}[scale = .9, minimum height = 20]
+%\node (fixed)[minimum width = 70, draw=red!50!black, fill = red!20, rounded corners] at ( .6,8.75) {\textcolor{red!50!black}{Fixed mindset}};
+%\node (growth)[minimum width = 70, draw=green!50!black, fill = green!20, rounded corners]  at ( 4.3,8.75){\textcolor{green!50!black}{Growth mindset}};
+%
+%\node (challenges)[text width = 320, draw=blue!30, fill = blue!20, align = left, minimum height = 24] at ( 0,7.5) {\textcolor{blue!40!black}{Herausforderungen}};
+%\node (obstacles)[text width = 320, draw=blue!30, fill = blue!20, align = left, minimum height = 24] at ( 0,6.25) {\textcolor{blue!40!black}{Hindernisse}};
+%\node (effort)[text width = 320, draw=blue!30, fill = blue!20, align = left, minimum height = 24] at ( 0,5) {\textcolor{blue!40!black}{Anstrengung}};
+%\node (criticism)[text width = 320, draw=blue!30, fill = blue!20, align = left, minimum height = 24] at ( 0,3.75) {\textcolor{blue!40!black}{Kritik}};
+%\node (success)[text width = 320, draw=blue!30, fill = blue!20, align = left, minimum height = 24] at ( 0,2.5) {\textcolor{blue!40!black}{Erfolg anderer}};
+%
+%\begin{scope}[draw = red!50!black]
+%\uncover<2-7>{\node (avoid)[minimum width = 70, draw, fill = red!20, rounded corners] at ( .6,7.5) {\textcolor{red!50!black}{Vermeiden}};
+%\path[draw, draw=red!50, line width = 5pt] (fixed) -- (avoid);};
+%\uncover<3-7>{\node (giveup)[minimum width = 70, draw, fill = red!20, rounded corners] at ( .6,6.25) {\textcolor{red!50!black}{Aufgeben}};
+%\path[draw, draw=red!50, line width = 5pt] (avoid) -- (giveup);};
+%\uncover<4-7>{\node (useless)[minimum width = 70, draw, fill = red!20, rounded corners] at ( .6,5) {\textcolor{red!50!black}{Nutzlos}};
+%\path[draw, draw=red!50, line width = 5pt] (giveup) -- (useless);};
+%\uncover<5-7>{\node (ignore)[minimum width = 70, draw, fill = red!20, rounded corners] at ( .6,3.75) {\textcolor{red!50!black}{Ignorieren}};
+%\path[draw, draw=red!50, line width = 5pt] (useless) -- (ignore);};
+%\uncover<6-7>{\node (threat)[minimum width = 70, draw, fill = red!20, rounded corners] at ( .6,2.5) {\textcolor{red!50!black}{Bedrohung}};
+%\path[draw, draw=red!50, line width = 5pt] (ignore) -- (threat);};
+%\end{scope}
+%
+%\begin{scope}[draw = green!50!black]
+%\uncover<2-7>{\node (embrace)[draw, minimum width = 70, fill = green!20, rounded corners] at ( 4.3,7.5) {\textcolor{green!50!black}{Nutzen}};
+%\path[draw,  line width = 5pt] (growth) -- (embrace);};
+%\uncover<3-7>{\node (persist)[draw, minimum width = 70,  fill = green!20, rounded corners] at (4.3,6.25) {\textcolor{green!50!black}{Weitermachen}};
+%\path[draw,  line width = 10pt] (embrace) -- (persist);};
+%\uncover<4-7>{\node (valuable)[draw, minimum width = 70,  fill = green!20, rounded corners] at ( 4.3,5) {\textcolor{green!50!black}{Wertvoll}};
+%\path[draw,  line width = 15pt] (persist) -- (valuable);};
+%\uncover<5-7>{\node (learn)[draw, minimum width = 70,  fill = green!20, rounded corners] at ( 4.3,3.75) {\textcolor{green!50!black}{Lernen}};
+%\path[draw,  line width = 20pt] (valuable) -- (learn);};
+%\uncover<6-7>{\node (inspiration)[draw, minimum width = 70,  fill = green!20, rounded corners] at (4.3,2.5) {\textcolor{green!50!black}{Inspiration}};
+%\path[draw,  line width = 25pt] (learn) -- (inspiration);};
+%\end{scope}
+%
+%\end{tikzpicture}
+%\end{center}
+%}
+%
+%\frame{\frametitle{Rolle des Lehrenden}
+%\framesubtitle{}
+%\begin{columns}[t] 
+%     \begin{column}[T]{6cm} 
+%     \vspace{1cm}
+%     	\begin{quote}
+%     		A teacher is never a giver of truth; he is a guide, a pointer to the truth that each student must find for himself.
+%     	\end{quote}
+%	\flushright Bruce Lee
+%	
+%     \end{column}
+%     	\begin{column}[T]{6cm} 
+%         	\begin{center}
+%            		\includegraphics[width=0.8\textwidth]{Bruce}
+%        		\end{center}
+%     \end{column}
+% \end{columns}
+%}
 
 
 \frame[allowframebreaks]{
@@ -225,78 +223,92 @@
 }
 
 
-\frame{\frametitle{Vorlesungsinhalte}
-\framesubtitle{}
-\begin{center}
-\begin{tikzpicture}[scale = 0.95, small mindmap, concept color=gray!30]
-\node [concept] {Schienen-fahrzeug-technik}
-child [grow = 0]{node[concept] {Grundlagen}
-child [grow = -30] {node[concept] {Systematik}}
-child [grow = 30]{node[concept] {Normen und Regeln}}}
-child [grow = 60]{node[concept] {Anfor-derungen}
-child [grow = -20] {node[concept] {Requirements Engineering}}
-child [grow = 20]{node[concept] {Lebenszyklus}}}
-child [grow = 130]{node[concept] {Fahrzeuge}
-child [grow = 30] {node[concept] {G\"uterwagen}}
-child [grow = 150]{node[concept] {Personen-fahrzeuge}}
-child [grow = 190]{node[concept] {Triebfahr-zeuge}}}
-child [grow = 180]{node[concept] {Zugf\"order-technik}
-child [grow = 160] {node[concept] {Spurf\"uhrung}}
-child [grow = 200]{node[concept] {Rad-Schiene-Kontakt}}}
-child [grow = 235]{node[concept] {Fahrzeug-konstruk-tion}
-child [grow = 160] {node[concept] {Bauformen}}
-child [grow = 200]{node[concept] {Mechanischer Aufbau}}}
-child [grow = 300]{node[concept] {Laufwerk}
-child [grow = 20] {node[concept] {Drehgestell}}
-child [grow = 210]{node[concept] {Radsatz}}
-child [grow = -20]{node[concept] {Federn und D\"ampfer}}
-};
-\end{tikzpicture}
-\end{center}
+%\frame{\frametitle{Vorlesungsinhalte}
+%\framesubtitle{}
+%\begin{center}
+%\begin{tikzpicture}[scale = 0.95, small mindmap, concept color=gray!30]
+%\node [concept] {Schienen-fahrzeug-technik}
+%child [grow = 0]{node[concept] {Grundlagen}
+%child [grow = -30] {node[concept] {Systematik}}
+%child [grow = 30]{node[concept] {Normen und Regeln}}}
+%child [grow = 60]{node[concept] {Anfor-derungen}
+%child [grow = -20] {node[concept] {Requirements Engineering}}
+%child [grow = 20]{node[concept] {Lebenszyklus}}}
+%child [grow = 130]{node[concept] {Fahrzeuge}
+%child [grow = 30] {node[concept] {G\"uterwagen}}
+%child [grow = 150]{node[concept] {Personen-fahrzeuge}}
+%child [grow = 190]{node[concept] {Triebfahr-zeuge}}}
+%child [grow = 180]{node[concept] {Zugf\"order-technik}
+%child [grow = 160] {node[concept] {Spurf\"uhrung}}
+%child [grow = 200]{node[concept] {Rad-Schiene-Kontakt}}}
+%child [grow = 235]{node[concept] {Fahrzeug-konstruk-tion}
+%child [grow = 160] {node[concept] {Bauformen}}
+%child [grow = 200]{node[concept] {Mechanischer Aufbau}}}
+%child [grow = 300]{node[concept] {Laufwerk}
+%child [grow = 20] {node[concept] {Drehgestell}}
+%child [grow = 210]{node[concept] {Radsatz}}
+%child [grow = -20]{node[concept] {Federn und D\"ampfer}}
+%};
+%\end{tikzpicture}
+%\end{center}
+%}
 }
+\frame{\frametitle{Lernziele}
+\framesubtitle{}
+\begin{itemize}
+\item Studierende können, ausgehend von einer Kenntnis der Grundlagen des Systems Schienenfahrzeug, Anforderungen an Schienenfahrzeuge und ihre Subsysteme formulieren.
+\item Studierende kennen die Grundlagen von Spurführung und Zugdynamik sowie von Fahrzeug- und Drehgestellkontruktion.
+\item Studierende können sich selbstständig in ein Thema der Schienenfahrzeugtechnik einarbeiten und zu den Ergebnissen präsentieren.
+\item Studierende können Mess- und Simulationsergebnisse in Berichtform dokumentieren. 
+\end{itemize}
+}
+
 
 \offslide{Fehlt etwas?}{Was k\"onnt Ihr noch gebrauchen? z.B. f\"ur die Railway Challenge, euer Mobilit\"atsfenster, ...}
 
 
-\frame{\frametitle{Themenplan}
-\framesubtitle{Das Lehrbuch von \emph{Janicki} et al. \citep{janicki} ist Pflichtlekt\"ure in diesem Modul, f\"ur weitere vertiefende Literatur siehe Literaturverzeichnis. Vorschl\"age f\"ur Themen der Seminararbeit sind willkommen!}
+\frame{\frametitle{Themenplan, Kapitel aus \cite{ihme2016schienenfahrzeugtechnik}}
 %\tiny
+\href{https://link.springer.com/book/10.1007/978-3-658-24923-6}{Link zum Buch (Im VPN)}
+
 \hspace{1cm}
 \begin{tabular}{|l|l|}
 \hline
-Thema & Kapitel aus \citep{janicki}\\ 
-Pr\"aliminarien,  G\"uterwagen, Personenfahrzeuge& 6, 7.1\\ \hline
-Einf\"uhrung Zugdynamik & 1.5.1, 1.5.2, 2.4 \\ \hline
-Zugdynamik - Einf\"uhrung, Kraftschluss, Schlupf &  1.5.2 \\ 
-Zugdynamik II - Fahrwiderstand, Zugkraft, Zugbremsung & 1.5, 5.2   \\ \hline
-Einf\"uhrung Spurf\"uhrung & 1.4   \\ \hline
-Kuppelsto{\ss}, Crash &   \\ \hline
-Fahrzeugkonstruktion & 2.1.1 - 2.1.9  \\
-Bauformen, Begrenzungen, Aufbau &  \\ 
-Werkstoffe, F\"ugetechnik, &     \\
-Brandschutz, Passive Safety &   \\ \hline
-Laufwerke  & 2.2.1 - 2.2.13   \\
-Einf\"uhrung, Radsatz, Drehgestell &  \\ 
-Federung, D\"ampfung, Anbauten &  \\ \hline 
+Thema & Kapitel \\ \hline
+Requirements Engineering & Lehrbrief +  Video\\ \hline
+Zugdynamik \& Fahrwiderstand & 2 \\ \hline
+Fahrzeugkonstruktion & 6  \\ \hline
+Laufwerke  & 5, 6.6   \\ \hline
+Einf\"uhrung Spurf\"uhrung & Lehrbrief +  Video\\ \hline
+Kuppelsto{\ss}, Crash & Lehrbrief +  Video  \\ \hline
 \end{tabular}
 }
 
-\frame{\frametitle{Semesterbegleitende Pr\"ufung, Praktikum}
+\frame{\frametitle{Selbststudium und semesterbegleitende Pr\"ufung}
 \framesubtitle{}
-\only<1>{
 \begin{itemize}
-\item Anhand Railway Challenge und \textit{Service Learning} f\"ur EVS
+\item Konzepterstellung Parkbahn-Lokomotive
 \begin{itemize}
-	\item Aufgaben werden abgestimmt
-\end{itemize}
+	 \item Nach IMechE-Lastenheft + Zusatzanforderungen
+	\item Ggf. enger Kostenrahmen
+		\end{itemize}
+\item Ablauf
+\begin{enumerate}
+	\item Anforderungsabdeckung / Grobkonzept (High-Level Design)
+	\item Detailed Design (Standardisierter Antriebsstrang und Bremse)
+	\begin{enumerate}[a)]
+		\item Wagenkasten
+		\item Drehgestell
+		\end{enumerate}
+	\item Nachweisf\"uhrung
+	\begin{enumerate}[a)]
+		\item Wagenkasten: Festigkeit
+		\item Drehgestell: Entgleisungssicherheit
+	\end{enumerate}
+\end{enumerate}
 \item Dokumentation durch technische Berichte
 \item Gewichtung Berichte: in Summe 100\% der Modulnote
-\end{itemize}}
-\only<2>{
-\begin{center}
-\includegraphics[width = 7.5cm]{SFT1Plan}
-\end{center}
-}
+\end{itemize}
 }
 
 

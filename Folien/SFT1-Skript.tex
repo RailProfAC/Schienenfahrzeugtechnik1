@@ -1,0 +1,228 @@
+\documentclass[11pt,a4paper, d]{article}
+\usepackage{beamerarticle}
+\usepackage{bibentry}
+\usepackage[round]{natbib}
+\usepackage{graphicx}
+\usepackage{epigraph}
+\usepackage{makeidx}
+\usepackage{svg}
+\usepackage{hyperref}
+\makeindex
+\usepackage[]{amsmath}
+\usepackage{pgfcalendar}
+\usepackage[]{amssymb}
+\usepackage{color}
+\usepackage{pict2e}
+\usepackage{algorithm2e}
+\usepackage[ngerman]{babel}
+\usepackage{tikz}
+\usetikzlibrary{decorations}
+\usetikzlibrary{calc}
+\usetikzlibrary{scopes}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{mindmap}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{multimedia}
+\usepackage{xcolor}
+\usepackage{keyval}
+\usepgfmodule{shapes}
+\usepackage{sfmath}
+\usepackage{pgfplots}
+\usepackage{sansmath}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{tabto,stackengine}
+\usepackage{fancyhdr}
+\definecolor{mint}{RGB}{32,178,170}
+\graphicspath{{../../../figures/}}
+\pgfplotsset{compat = 1.16}
+\input{Symbols}
+
+%\mode<handout>{
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{9 on 1}[a4paper,border shrink=5mm]
+%}
+
+%\AtBeginSection{\frame{\sectionpage}}
+\newtranslation[to=ngerman]{Section}{Teil}
+\newtranslation[to=ngerman]{Subsection}{Abschnitt}
+
+\pgfplotsset{width=5cm, height = 5 cm,
+	tick label style = {font=\sansmath\sffamily},
+  every axis label = {font=\sansmath\sffamily},
+  legend style = {font=\sansmath\sffamily},
+  label style = {font=\sansmath\sffamily}}
+%\definecolor{RYB1}{RGB}{240,249,232}
+%\definecolor{RYB2}{RGB}{186,228,188}
+%\definecolor{RYB3}{RGB}{123,204,196}
+%\definecolor{RYB4}{RGB}{67,162,202}
+%\definecolor{RYB5}{RGB}{18,104,172}
+%
+%\definecolor{RYB11}{RGB}{141,211,199}
+%\definecolor{RYB12}{RGB}{255,255,179}
+%\definecolor{RYB13}{RGB}{190,186,218}
+%\definecolor{RYB14}{RGB}{251,128,114}
+%\definecolor{RYB15}{RGB}{128,177,211}
+%\definecolor{RYB16}{RGB}{253,180,98}
+%\definecolor{RYB17}{RGB}{179,222,105}
+%\definecolor{RYB18}{RGB}{252,205,229}
+%\definecolor{RYB19}{RGB}{217,217,217}
+%\definecolor{RYB20}{RGB}{188,128,189}
+%\definecolor{RYB21}{RGB}{204,235,197}
+%\definecolor{RYB22}{RGB}{255,237,111}
+%
+%
+
+\renewcommand*\familydefault{\sfdefault}
+\renewcommand{\arraystretch}{1.1}
+
+\begin{document}
+\tikzstyle{element} = [draw,rectangle, align = center, text width = 2.5 cm, node distance = 1.25 cm]
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\begin{picture}(0,0)(0,0)\put(70,-47){\includegraphics[height=4cm]{fh_logo}}\end{picture}}
+\lhead{Prof. Dr. Raphael Pfaff}
+\lfoot{Datei: \jobname, Stand: \today}
+\rfoot{Seite \thepage}
+
+
+\newcommand\mydots{\makebox[1em][c]{.\hfil.\hfil.}}
+
+%% Formalia
+\newcommand{\revision}{Rev. 02}
+\newcommand{\docnum}{SFV-14033}
+
+\newcommand{
+\offslide}[2]{
+\begin{frame}
+\frametitle{\includegraphics[scale=0.05] {Offwhite} \hspace{.5mm} #1}
+%\framesubtitle{#2}
+\only<beamer>{
+\begin{tikzpicture}[x=1cm, y=1cm, semitransparent]
+\draw[step=5mm, line width=0.2mm, black!40!white] (0,0) grid (\textwidth,\textheight-1cm);
+\node[anchor = south east] at (\textwidth,0) {#2};
+
+\end{tikzpicture}}
+\only<article>{
+\begin{tikzpicture}[x=1cm, y=1cm, semitransparent]
+\draw[step=5mm, line width=0.2mm, black!40!white] (0,0) grid (\textwidth,7cm);
+\node[anchor = south east] at (\textwidth,0) {#2};
+
+\end{tikzpicture}}
+\end{frame}
+}
+
+\newcommand{\source}[1]{\rotatebox{90}{\tiny \color{gray} #1}}
+
+
+\title{84111 Schienenfahrzeugtechnik I}
+\subtitle{}
+\author[R. Pfaff]{Prof. Dr. Raphael Pfaff}
+\institute[Dokument \docnum, \revision]{Fachhochschule Aachen}
+\logo{\put(-18, 120){\includegraphics[width=1.4cm]{logoR}}}
+{
+\usebackgroundtemplate{
+{\transparent{.3}\includegraphics[width= \paperwidth]{EmmaCastlepale}}
+%\begin{tikzpicture}
+%\node[opacity=.1] {\includegraphics[width=\paperwidth]{Innotrans2018.jpg}};
+%\end{tikzpicture}
+}
+
+\author{Prof. Dr. Raphael Pfaff\\Lehrgebiet Schienenfahrzeugtechnik
+\begin{picture}(0,0)(0,0)\put(120,400){\includegraphics[height=4cm]{fh_logo}}\end{picture}}
+\title{Schienenfahrzeugtechnik}
+\subtitle{Lehrbrief\\
+\vspace{1cm}
+\begin{tikzpicture}[font = \Huge ]
+\draw[fill = mint, draw = none](0,0) rectangle (7,8);
+\node (1) at (3.5,6.8) {\includegraphics[width = 2cm]{crown}};
+\node[below of = 1, node distance = 1.2cm] (2) {KEEP};
+\node[below of = 2] (3) {CALM};
+\node[below of = 3] (4) {\Large and study};
+\node[below of = 4] (5) {RAIL};
+\node[below of = 5] (6) {VEHICLES};
+\end{tikzpicture}}
+\date{}
+
+
+%\begin{document}
+\definecolor{mint}{RGB}{0,178,169}
+\newcommand{\barP}{\, \mathrm{bar}}
+\newcommand{\lehrtext}[1]{
+\only<article>{
+\vspace{0.3cm}
+\leavevmode%
+  \tabto*{-1.8cm}% LEFT MARGIN
+  %\tabto*{\dimexpr\linewidth+40pt\relax}% RIGHT MARGIN
+  \smash{\belowbaseline[-\ht\strutbox]{\makebox[0pt]%
+%    [r]% LEFT MARGIN
+    [l]% RIGHT MARGIN
+  {\includegraphics[width = 1.5cm]{teacher}}}}%
+  \tabto*{\TabPrevPos}%
+#1
+}
+}
+
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\mum}{\operatorname{\mu m}}
+\newcommand{\E}{\operatorname{E}}
+
+\newcounter{exercise}
+\newcommand*\theex{\stepcounter{exercise}\arabic{exercise}}
+
+%\thispagestyle{fancy}
+\maketitle
+\newpage
+\tableofcontents
+%\newpage
+
+\begin{frame} % Cover slide
+\titlepage
+\end{frame}
+\usebackgroundtemplate{}
+% Pr\"aliminarien
+\include{part1}
+%
+%%System\"uberblick
+%\include{part2}
+%
+%% Grundlagen
+%\include{part3}
+
+
+%% G\"uterwagen
+%\include{part5}
+%
+%% Personenfahrzeuge
+%\include{part6}
+
+% Anforderungen
+\include{part5a}
+
+%Fahrzeugkonstruktion
+\include{part10}
+
+%Laufwerk
+\include{part11}
+
+% Einf\"uhrung Zugdynamik
+\include{part7}
+
+% Zugdynamik
+\include{part9}
+
+% Einf\"uhrung Spurf\"uhrung
+\include{part8}
+
+
+\frame[allowframebreaks]{\frametitle{Literatur}
+\framesubtitle{}
+\nocite{wende}
+\bibliographystyle{plainnat}
+\bibliography{../../../../bib}
+}
+
+\end{document}

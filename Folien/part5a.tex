@@ -1,9 +1,17 @@
-% !TEX root = SFV-15014_HuV.tex
+% !TEX root = SFT1-Skript.tex
+% !TEX root = SFT1-Folien.tex
 \section{Requirements Engineering}
-\sectionpage
+\lehrtext{
+In diesem Abschnitt der Veranstaltung sollt ihr lernen,
+\begin{itemize}
+	\item wo die Anforderungen an Schienenfahrzeuge herkommen,
+	\item wie man systematisch mit ihnen arbeitet und
+	\item welche Pr\"ufschritte euch (auch in Industrieprojekten) erwarten.
+\end{itemize}
+}
 
 \frame{\frametitle{Warum Requirements Engineering (RE)?}
-\framesubtitle{Requirements Engineering befasst sich mit dem systematischen Erfassen, Umsetzen und Pr\"ufen von Anforderungen im Entwicklungsprozess.}
+\lehrtext{Requirements Engineering befasst sich mit dem systematischen Erfassen, Umsetzen und Pr\"ufen von Anforderungen im Entwicklungsprozess. Durch striktes RE kann man Projektrisiken erheblich reduzieren und evtl. auch Kosten sparen.}
 \begin{itemize}
 \item Qualit\"at: Qualit\"at ist das Ma{\ss} der Erf\"ullung der Anforderungen an ein Produkt.
 \item Kosten- und Termintreue
@@ -14,7 +22,15 @@
 }
 
 \frame{\frametitle{Key-Aspects of Requirements Engineering}
-\framesubtitle{}
+\lehrtext{
+Was RE vom sonstigen Entwicklungsprozess unterscheidet ist vornehmlich, dass:
+\begin{itemize}
+	\item alle, die im Projekt Anspr\"uche haben (``Stakeholder'') k\"onnen sich einbringen,
+	\item Pr\"ufungen werden als Reviews mit den Stakeholdern durchgef\"uhrt und
+	\item jede Anforderung ist von Anforderung bis zum Nachweis der Erf\"ullung nachvollziehbar.
+\end{itemize}
+Beim dritten Punkt wird sichergestellt, dass eine geschlossene Kette von Verweisen von der Anforderung \"uber alle nachgelagerten Dokumente (Pflichtenheft, Konstruktionsunterlagen, Test-Spec...) f\"uhrt, die sicherstellt, dass diese Anforderung umgesetzt und erf\"ullt wurde. \href{https://de.wikipedia.org/w/index.php?title=Rückverfolgbarkeit_(Anforderungsmanagement)&oldid=197422472}{Traceability bei Wikipedia}
+}
 \begin{itemize}
 \item Stakeholder Involvement
 \item Technical Reviews
@@ -25,7 +41,10 @@
 %\offslide{Generisches Phasenmodell}{Modell einer beliebigen Phase eines Entwicklungsprozesses}
 
 \frame{\frametitle{Generisches Phasenmodell}
-\framesubtitle{Modell einer beliebigen Phase eines Entwicklungsprozesses}
+\lehrtext{
+Jede Phase eines Entwicklungsprozesses kann (sollte!) wie folgt abgebildet sein, damit die Qualit\"at des Entwicklungsschritts sichergestellt werden kann.
+
+}
 \begin{columns}[t] 
      \begin{column}[T]{5cm} 
      \textbf{F\"ur jede Phase festzulegen:}
@@ -49,10 +68,23 @@
  \end{columns}
 }
 
-\offslide{V-Modell f\"ur Requirements Engineering}
+%\offslide{V-Modell f\"ur Requirements Engineering}
+
+\frame{\frametitle{V-Modell f\"ur Requirements Engineering}
+\lehrtext{
+Die einzelnen Phasen k\"onnen dem V-Modell entnommen werden (es empfiehlt sich sogar!). Bitte beachtet im Bild die Verbindungen zwischen absteigendem Pfad (Entwicklungsdokumente) und aufsteigendem Pfad (Pr\"ufdokumente): hier hat die Organisation die M\"oglichkeit, sich weiterzuentwickeln. \href{https://de.wikipedia.org/wiki/V-Modell_(Entwicklungsstandard)}{V-Modell bei Wikipedia}
+}
+         	\begin{center}
+            		\includegraphics[width=0.9\textwidth]{VModel}\source{US DoT}
+        		\end{center}
+}
 
 \frame{\frametitle{Requirements Analysis}
-\framesubtitle{Ermitteln der System Level Requirements}
+\lehrtext{Im ersten Schritt geht es um das Ermitteln der System Level Requirements, also der sehr hoch angesiedelten Anforderungen. Das h\"ort sich einfacher an, als es ist: viele Kunden wissen gar nicht, was sie brauchen. Daher liest man h\"aufig auch den Term ``Elicit Requirements (Anforderungen hervorlocken)'' daf\"ur.
+
+Der erste Meilenstein fragt daher ab, ob beide Seiten die Anforderungen verstanden haben. Hier geht es auch um rudiment\"are Dinge wie den Ausgabestand des Lastenhefts.
+
+}
 \begin{columns}[t] 
      \begin{column}[T]{6cm} 
      \textbf{Leitfragen:}
@@ -75,7 +107,8 @@
 %\offslide{Erg\"anzen des generischen Phasenmodells}{}
 
 \frame{\frametitle{System Specification}
-\framesubtitle{Top Level Design: Architektur, L\"osungen, Subsysteme}
+\lehrtext{Im n\"acshten Level geht es um den Entwurf auf einer hohen Abstraktionsebene, also um die Architektur, L\"osungen und den Zuschnitt der Subsysteme.
+}
 \begin{columns}[t] 
      \begin{column}[T]{6cm} 
      \textbf{Leitfragen:}
@@ -99,7 +132,8 @@
 %\offslide{Erg\"anzen des generischen Phasenmodells}%{Durchf\"uhrung in der \"Ubung}
 
 \frame{\frametitle{Subsystem Design}
-\framesubtitle{Lower Level Design: Architektur, L\"osungen, Module}
+\lehrtext{
+In diesem Schritt wird die Feinstruktur des Systems entwickelt (``Lower Level Design''), also die Architektur der Subsysteme, Detaill\"osungen und der Zuschnitt der Module.}
 \begin{columns}[t] 
      \begin{column}[T]{6cm} 
      \textbf{Leitfragen:}
@@ -122,7 +156,9 @@
 %\offslide{Erg\"anzen des generischen Phasenmodells}%{Durchf\"uhrung in der \"Ubung}
 
 \frame{\frametitle{Module Design}
-\framesubtitle{``Build to Specifications'': Zeichnungen, Schemata,...}
+\lehrtext{Jetzt geht es ins Eingemachte: im Module Design entwickelt man die ``Build to Specifications'', also Zeichnungen, Schemata usw., nach denen dann wirklich gefertigt bzw. beschafft wird. Dementsprechend muss das dann auch ordentlich \"uberpr\"uft werden - in der Regel ganz klassisch im Vier-Augen-Prinzip, also Pr\"ufung und Freigabe
+
+}
 \begin{columns}[t] 
      \begin{column}[T]{6cm} 
      \textbf{Leitfragen:}

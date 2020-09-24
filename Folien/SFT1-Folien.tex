@@ -1,6 +1,6 @@
 \documentclass[slidestop,compress,mathserif, aspectratio = 169]{beamer}
-\usecolortheme{seagull} % Beamer color theme
-\useinnertheme{rectangles}
+%\usecolortheme{seagull} % Beamer color theme
+\usetheme{metropolis}
 \usepackage{etex}
 %\usepackage[bars]{beamerthemetree} % Beamer theme v 2.2
 %\usetheme{Madrid} % Beamer theme v 3.0
@@ -37,9 +37,7 @@
 \usepackage{siunitx}
 \usepackage{multirow}
 
-\definecolor{blue}{rgb}{0,0,1}
-\definecolor{mint}{cmyk}{75,0,40,0}
-\definecolor{mint}{rgb}{32,178,170}
+\definecolor{mint}{RGB}{32,178,170}
 \graphicspath{{../../../figures/}}
 
 \input{Symbols}
@@ -86,9 +84,20 @@
 %% Formalia
 \newcommand{\revision}{Rev. 02}
 \newcommand{\docnum}{SFV-14033}
-\newcommand{\offslide}[2]{\frame{\frametitle{ \includegraphics[scale=0.01] {Off}\hspace{1.5mm} #1}
-\framesubtitle{#2}
-}}
+
+\newcommand{
+\offslide}[2]{
+\begin{frame}
+\frametitle{\includegraphics[scale=0.05] {Offwhite} \hspace{.5mm} #1}
+%\framesubtitle{#2}
+\begin{tikzpicture}[x=1cm, y=1cm, semitransparent]
+\draw[step=5mm, line width=0.2mm, black!40!white] (0,0) grid (\textwidth,\textheight-1cm);
+\node[anchor = south east] at (\textwidth,0) {#2};
+
+\end{tikzpicture}
+\end{frame}
+}
+
 \newcommand{\source}[1]{\rotatebox{90}{\tiny \color{gray} #1}}
 
 
@@ -96,7 +105,19 @@
 \subtitle{}
 \author[R. Pfaff]{Prof. Dr. Raphael Pfaff}
 \institute[Dokument \docnum, \revision]{Fachhochschule Aachen}
-\logo{\put(-18, 170){\includegraphics[width=1.4cm]{logoR}}}
+\logo{\put(-18, 120){\includegraphics[width=1.4cm]{logoR}}}
+{
+\usebackgroundtemplate{
+{\transparent{.3}\includegraphics[width= \paperwidth]{EmmaCastlepale}}
+%\begin{tikzpicture}
+%\node[opacity=.1] {\includegraphics[width=\paperwidth]{Innotrans2018.jpg}};
+%\end{tikzpicture}
+}
+
+\begin{frame} % Cover slide
+\titlepage
+\end{frame}
+\usebackgroundtemplate{}
 % Pr\"aliminarien
 \include{part1}
 %
@@ -107,11 +128,11 @@
 %\include{part3}
 
 
-% G\"uterwagen
-\include{part5}
-
-% Personenfahrzeuge
-\include{part6}
+%% G\"uterwagen
+%\include{part5}
+%
+%% Personenfahrzeuge
+%\include{part6}
 
 % Anforderungen
 \include{part5a}
@@ -124,6 +145,7 @@
 
 % Einf\"uhrung Zugdynamik
 \include{part7}
+
 % Zugdynamik
 \include{part9}
 

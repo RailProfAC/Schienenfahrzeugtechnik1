@@ -1,4 +1,4 @@
-% !TEX root = SFV-14033_SFT1.tex
+% !TEX root = SFT1-Skript.tex
 \section{G\"uterwagen}
 \frame{\sectionpage}
 
@@ -7,17 +7,24 @@
 \framesubtitle{}
 \begin{center}
 \begin{tikzpicture}[scale = 1]
-		\begin{axis}[width = 10 cm, ybar =2pt, bar width = 3pt,    		xlabel={Jahr},%    		ylabel={\color{blue!80!black}Mrd. tkm},
+		\begin{axis}[width = 10 cm, ybar =2pt, bar width = 3pt,
+    		xlabel={Jahr},
+%    		ylabel={\color{blue!80!black}Mrd. tkm},
 		%xtick=data,
 		xtick={1997,2000,2005,2010,2015},
 		x tick label style={rotate=45,anchor=east},
 		ymin = 0, ymax = 125,
-		legend style={at={(0.5,-0.30)},        		anchor=north,legend columns=-1},
+		legend style={at={(0.5,-0.30)},
+        		anchor=north,legend columns=-1},
 		/pgf/number format/.cd,
         		use comma,
-        		1000 sep={},]\addplot table {SGVMenge.dat};
-\addplot table {SGVWagen.dat};%\addplot table {data_d3.dat};%\addplot table {data_d4.dat};
-\legend{Mrd. tkm, 1000 G\"uterwagen}\end{axis}
+        		1000 sep={},]
+\addplot table {SGVMenge.dat};
+\addplot table {SGVWagen.dat};
+%\addplot table {data_d3.dat};
+%\addplot table {data_d4.dat};
+\legend{Mrd. tkm, 1000 G\"uterwagen}
+\end{axis}
 \end{tikzpicture}
 \end{center}
 }
